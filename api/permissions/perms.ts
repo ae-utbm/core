@@ -27,10 +27,6 @@ export const PERMISSIONS = [
 		name: 'CAN_READ_PERMISSIONS_OF_ROLE',
 		description: 'Can read permissions of a role',
 	},
-	{
-		name: 'CAN_READ_ALL_PERMISSIONS',
-		description: 'Can read all permissions available',
-	},
 
 	// ROLES
 	{
@@ -38,20 +34,20 @@ export const PERMISSIONS = [
 		description: 'Can create a new role',
 	},
 	{
-		name: 'CAN_REVOKE_ROLE',
-		description: 'Can revoke a role (making it disabled)',
+		name: 'CAN_EDIT_ROLE',
+		description: 'Can edit a role',
 	},
 	{
-		name: 'CAN_EDIT_EXPIRATION_OF_ROLE',
-		description: 'Can edit the expiration date of a role',
+		name: 'CAN_VIEW_ALL_ROLES',
+		description: 'Can view all roles existing',
 	},
 	{
-		name: 'CAN_READ_ROLES_OF_USER',
+		name: 'CAN_VIEW_ROLE_USERS',
+		description: 'Can view all users in a role',
+	},
+	{
+		name: 'CAN_VIEW_USER_ROLES',
 		description: 'Can read roles of a user',
-	},
-	{
-		name: 'CAN_READ_ALL_ROLES',
-		description: 'Can read all roles available',
 	},
 
 	// USERS
@@ -80,6 +76,14 @@ export const PERMISSIONS = [
 	{
 		name: 'CAN_VIEW_USERS_IN_PROMOTION',
 		description: 'Can view all users in a promotion',
+	},
+	{
+		name: 'CAN_READ_PROMOTION',
+		description: "Can read a promotion's information",
+	},
+	{
+		name: 'CAN_EDIT_PROMOTION',
+		description: 'Can edit a promotion (name, description, etc.)',
 	},
 ] as const;
 

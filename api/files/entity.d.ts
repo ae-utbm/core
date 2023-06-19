@@ -16,9 +16,6 @@ export interface FileEntity extends BaseEntity {
 	/** The file's visibility */
 	visibility: string;
 
-	/** The file's type */
-	type: string;
-
 	/** The file's description */
-	description: string;
+	description?: string;
 }
