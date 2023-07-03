@@ -35,15 +35,19 @@ export const PERMISSIONS = [
 	},
 	{
 		name: 'CAN_EDIT_ROLE',
-		description: 'Can edit a role',
+		description: 'Can edit roles',
 	},
 	{
 		name: 'CAN_VIEW_ALL_ROLES',
 		description: 'Can view all roles existing',
 	},
 	{
-		name: 'CAN_VIEW_ROLE_USERS',
-		description: 'Can view all users in a role',
+		name: 'CAN_VIEW_USERS_OF_ROLE',
+		description: 'Can view all users in roles',
+	},
+	{
+		name: 'CAN_EDIT_USERS_OF_ROLE',
+		description: 'Can edit users in roles',
 	},
 	{
 		name: 'CAN_VIEW_USER_ROLES',
@@ -57,19 +61,19 @@ export const PERMISSIONS = [
 	},
 	{
 		name: 'CAN_UPDATE_USER',
-		description: 'Can update an existing user',
+		description: 'Can update users',
 	},
 	{
 		name: 'CAN_DELETE_USER',
-		description: 'Can delete an existing user',
+		description: 'Can delete users',
 	},
 	{
 		name: 'CAN_READ_USER_PUBLIC',
-		description: 'Can read public information about an existing user',
+		description: 'Can read public information of users',
 	},
 	{
 		name: 'CAN_READ_USER_PRIVATE',
-		description: 'Can read all information about an existing user',
+		description: 'Can read all information of users',
 	},
 
 	// PROMOTIONS
