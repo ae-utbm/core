@@ -38,6 +38,9 @@ export interface UserEntity<TPicture, TBanner, TPromo, TPerm, TRole, TSub, TLog>
 	/** The email verification */
 	email_verified: boolean;
 
+	/** The email verification token */
+	email_verification?: string;
+
 	/** The user's password */
 	password: string;
 
