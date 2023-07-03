@@ -10,66 +10,56 @@ export const PERMISSIONS = [
 		description: 'As access to everything',
 	},
 
+	// LOGS
+	{
+		name: 'CAN_READ_LOGS_OF_USER',
+		description: 'Can read logs of users',
+	},
+	{
+		name: 'CAN_DELETE_LOGS_OF_USER',
+		description: 'Can delete logs of users',
+	},
+
 	// PERMISSIONS
 	{
 		name: 'CAN_EDIT_PERMISSIONS_OF_USER',
-		description: 'Can assign/remove permissions of a user',
+		description: 'Can assign/remove permissions of users',
 	},
 	{
 		name: 'CAN_EDIT_PERMISSIONS_OF_ROLE',
-		description: 'Can assign/remove permissions of an existing role',
+		description: 'Can assign/remove permissions of existing roles',
 	},
 	{
 		name: 'CAN_READ_PERMISSIONS_OF_USER',
-		description: 'Can read permissions of a user',
+		description: 'Can read permissions users',
 	},
 	{
 		name: 'CAN_READ_PERMISSIONS_OF_ROLE',
-		description: 'Can read permissions of a role',
+		description: 'Can read permissions roles',
 	},
 
 	// ROLES
 	{
-		name: 'CAN_CREATE_ROLE',
-		description: 'Can create a new role',
-	},
-	{
 		name: 'CAN_EDIT_ROLE',
-		description: 'Can edit roles',
+		description: 'Can edit/create roles',
 	},
 	{
-		name: 'CAN_VIEW_ALL_ROLES',
-		description: 'Can view all roles existing',
-	},
-	{
-		name: 'CAN_VIEW_USERS_OF_ROLE',
-		description: 'Can view all users in roles',
-	},
-	{
-		name: 'CAN_EDIT_USERS_OF_ROLE',
-		description: 'Can edit users in roles',
-	},
-	{
-		name: 'CAN_VIEW_USER_ROLES',
-		description: 'Can read roles of a user',
+		name: 'CAN_READ_ROLE',
+		description: 'Can read all roles that exist',
 	},
 
 	// USERS
 	{
-		name: 'CAN_CREATE_USER',
-		description: 'Can create a new user',
-	},
-	{
-		name: 'CAN_UPDATE_USER',
-		description: 'Can update users',
+		name: 'CAN_EDIT_USER',
+		description: 'Can create a new user or edit an existing one',
 	},
 	{
 		name: 'CAN_DELETE_USER',
 		description: 'Can delete users',
 	},
 	{
-		name: 'CAN_READ_USER_PUBLIC',
-		description: 'Can read public information of users',
+		name: 'CAN_READ_USER',
+		description: 'Can read filtered information of users',
 	},
 	{
 		name: 'CAN_READ_USER_PRIVATE',
@@ -77,10 +67,6 @@ export const PERMISSIONS = [
 	},
 
 	// PROMOTIONS
-	{
-		name: 'CAN_VIEW_USERS_IN_PROMOTION',
-		description: 'Can view all users in a promotion',
-	},
 	{
 		name: 'CAN_READ_PROMOTION',
 		description: "Can read a promotion's information",
