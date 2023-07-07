@@ -1,3 +1,5 @@
+import type { email } from '@types';
+
 import { Collection } from '@mikro-orm/core';
 import { BaseEntityLogged } from '../base-entity';
 import { FileEntity } from '../files';
@@ -33,7 +35,7 @@ export interface UserVisibilityEntity<TUser> extends BaseEntityLogged {
 
 export interface UserEntity<TPicture, TBanner, TPromo, TPerm, TRole, TSub, TLog> extends BaseEntityLogged {
 	/** The user's email */
-	email: string;
+	email: email;
 
 	/** The email verification */
 	email_verified: boolean;

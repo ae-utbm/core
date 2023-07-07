@@ -1,3 +1,4 @@
+import type { email } from '@types';
 import type { Request as ExpressRequest } from 'express';
 
 export * from './files';
@@ -15,7 +16,7 @@ export interface JWTPayload {
 	/** The user id */
 	sub: number;
 	/** The user email */
-	email: string;
+	email: email;
 
 	iat: number;
 
