@@ -1,8 +1,7 @@
+import type { BaseEntityLogged } from '../base-entity';
+import type { FileEntity } from '../files';
+import type { Collection } from '@mikro-orm/core';
 import type { Email } from '@types';
-
-import { Collection } from '@mikro-orm/core';
-import { BaseEntityLogged } from '../base-entity';
-import { FileEntity } from '../files';
 
 export interface UserPictureEntity<TUser> extends FileEntity {
 	/** The file's owner */

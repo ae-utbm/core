@@ -1,5 +1,4 @@
 import type { Email } from '@types';
-import type { Request as ExpressRequest } from 'express';
 
 export * from './files';
 export * from './logs';
@@ -25,5 +24,3 @@ export interface JWTPayload {
 	/** The expiration of the token */
 	exp: number;
 }
-
-export type Request = ExpressRequest & { user: User };

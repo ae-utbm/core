@@ -1,6 +1,6 @@
-import { BaseEntity } from '../base-entity';
-import { FileEntity } from '../files/entity';
-import { Collection } from '@mikro-orm/core';
+import type { BaseEntity } from '../base-entity';
+import type { FileEntity } from '../files/entity';
+import type { Collection } from '@mikro-orm/core';
 
 export interface PromotionEntity<TPicture, TUser> extends BaseEntity {
 	/** What number is this promotion */
