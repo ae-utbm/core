@@ -4,6 +4,9 @@ import { Path } from "nestjs-i18n";
 export type I18nTranslations = {
     "responses": {
         "errors": {
+            "auth": {
+                "invalid_payload": string;
+            };
             "birthday": {
                 "invalid": string;
             };
@@ -12,6 +15,7 @@ export type I18nTranslations = {
                 "used": string;
                 "not_found": string;
                 "verified": string;
+                "unverified": string;
                 "token": {
                     "invalid": string;
                 };
