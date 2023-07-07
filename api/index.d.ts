@@ -12,6 +12,8 @@ export * from './users';
 export * from './dto';
 export * from './base-entity';
 
+export * from './i18n';
+
 export interface JWTPayload {
 	/** The user id */
 	sub: number;
