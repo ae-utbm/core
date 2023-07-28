@@ -4,9 +4,6 @@ import { Path } from "nestjs-i18n";
 export type I18nTranslations = {
     "responses": {
         "errors": {
-            "auth": {
-                "invalid_payload": string;
-            };
             "birthday": {
                 "invalid": string;
             };
@@ -31,9 +28,26 @@ export type I18nTranslations = {
             "id_or_email": {
                 "missing": string;
             };
+            "image": {
+                "invalid_aspect_ratio": string;
+                "invalid_mime_type": string;
+            };
+            "password": {
+                "mismatch": string;
+            };
+            "permission": {
+                "invalid": string;
+                "not_found_on_user": string;
+                "already_on_user": string;
+            };
         };
         "success": {
             "deleted": string;
+        };
+        "not_found": {
+            "promotion": {
+                "logo": string;
+            };
         };
     };
     "templates": {
