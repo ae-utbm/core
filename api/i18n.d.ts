@@ -40,14 +40,15 @@ export type I18nTranslations = {
                 "not_found_on_user": string;
                 "already_on_user": string;
             };
+            "promotion": {
+                "logo_not_found": string;
+            };
+            "role": {
+                "name_used": string;
+            };
         };
         "success": {
             "deleted": string;
-        };
-        "not_found": {
-            "promotion": {
-                "logo": string;
-            };
         };
     };
     "templates": {
