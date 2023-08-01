@@ -46,6 +46,11 @@ export type I18nTranslations = {
             "role": {
                 "name_used": string;
             };
+            "jwt": {
+                "invalid": string;
+                "expired": string;
+                "unknown": string;
+            };
         };
         "success": {
             "deleted": string;
