@@ -1,5 +1,5 @@
 import { BaseEntity } from '../base-entity';
-import { PermissionName } from '../permissions';
+import { PERMISSION_NAMES } from '../permissions';
 
 /**
  * Entity used to store permissions attached to users
@@ -7,7 +7,7 @@ import { PermissionName } from '../permissions';
  */
 export class PermissionEntity<TUser> extends BaseEntity {
 	/** Name of the permission, in caps */
-	name: PermissionName;
+	name: PERMISSION_NAMES;
 
 	/** Determine wether the permission is still active */
 	revoked: boolean;

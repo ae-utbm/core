@@ -1,4 +1,4 @@
-import type { PermissionName } from '.';
+import type { PERMISSION_NAMES } from '.';
 
 /**
  * This file contains all the permissions available in the API.
@@ -77,4 +77,4 @@ export const PERMISSIONS = [
 	},
 ] as const;
 
-export const PERMISSIONS_NAMES: PermissionName[] = PERMISSIONS.map((p) => p.name);
+export const PERMISSIONS_NAMES: PERMISSION_NAMES[] = PERMISSIONS.map((p) => p.name);

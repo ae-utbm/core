@@ -1,4 +1,4 @@
-import type { Email } from '@types';
+import type { email } from '@types';
 
 export * from './files';
 export * from './logs';
@@ -17,7 +17,7 @@ export interface JWTPayload {
 	/** The user id */
 	sub: number;
 	/** The user email */
-	email: Email;
+	email: email;
 
 	iat: number;
 

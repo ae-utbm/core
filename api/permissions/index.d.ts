@@ -9,7 +9,7 @@ import { PERMISSIONS } from './perms';
  * @warning Do not use this type to define PERMISSIONS, as it would break
  * the type safety of the decorator (it would allow to pass any string)
  */
-export interface PermissionObject {
+export interface Permission {
 	/**
 	 * Name of the permission, in uppercase
 	 */
@@ -24,4 +24,4 @@ export interface PermissionObject {
 /**
  * List of available permissions throughout the API
  */
-export type PermissionName = (typeof PERMISSIONS)[number]['name'];
+export type PERMISSION_NAMES = (typeof PERMISSIONS)[number]['name'];

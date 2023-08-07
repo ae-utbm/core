@@ -1,7 +1,7 @@
 import type { BaseEntityLogged } from '../base-entity';
 import type { FileEntity } from '../files';
 import type { Collection } from '@mikro-orm/core';
-import type { Email } from '@types';
+import type { email } from '@types';
 
 export interface UserPictureEntity<TUser> extends FileEntity {
 	/** The file's owner */
@@ -34,7 +34,7 @@ export interface UserVisibilityEntity<TUser> extends BaseEntityLogged {
 
 export interface UserEntity<TPicture, TBanner, TPromo, TPerm, TRole, TSub, TLog> extends BaseEntityLogged {
 	/** The user's email */
-	email: Email;
+	email: email;
 
 	/** The email verification */
 	email_verified: boolean;

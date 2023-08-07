@@ -1,4 +1,4 @@
-import { PermissionName } from '.';
+import { PERMISSION_NAMES } from '.';
 
 export interface PermissionDto {
 	show_revoked: boolean;
@@ -10,7 +10,7 @@ export interface PermissionsPostDto {
 	id: number;
 
 	/** The permission's name */
-	permission: PermissionName;
+	permission: PERMISSION_NAMES;
 
 	/** The expiration date */
 	expires: Date;
@@ -21,7 +21,7 @@ export interface PermissionPatchDto {
 	id: number;
 
 	/** The permission's name */
-	name: PermissionName;
+	name: PERMISSION_NAMES;
 
 	/** The permission's expiration date */
 	expires: Date;

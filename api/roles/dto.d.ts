@@ -1,8 +1,8 @@
-import { PermissionName } from '../permissions';
+import { PERMISSION_NAMES } from '../permissions';
 
 export interface RolePostDto {
 	name: Uppercase<string>;
-	permissions: PermissionName[];
+	permissions: PERMISSION_NAMES[];
 	expires: Date;
 }
 

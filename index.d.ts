@@ -2,11 +2,15 @@ import 'jest-extended';
 
 export * from './api';
 
-export type AspectRatio = `${number}:${number}`;
-export type Email = `${string}@${string}.${string}`;
+export type aspect_ratio = `${number}:${number}`;
+export type email = `${string}@${string}.${string}`;
 
-export type Class<T> = new (...args: unknown[]) => T;
-export type ObjectKeysArray<T extends object> = Array<keyof T>;
+// eslint-disable-next-line @typescript-eslint/ban-types
+export type Abstract<T> = Function & { prototype: T };
+export type Constructor<T> = new (...args: unknown[]) => T;
+export type Class<T> = Abstract<T> | Constructor<T>;
+
+export type KeysOf<T extends object> = Array<keyof T>;
 
 declare global {
 	declare namespace jest {
