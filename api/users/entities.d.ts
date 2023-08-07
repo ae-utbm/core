@@ -32,7 +32,7 @@ export interface UserVisibilityEntity<TUser> extends BaseEntityLogged {
 	promotion: boolean;
 }
 
-export interface UserEntity<TPicture, TBanner, TPromo, TPerm, TRole, TSub, TLog> extends BaseEntityLogged {
+export interface UserEntity<TPicture, TBanner, TPromo, TPerm, TRole, TSub, TLog, TVisibility> extends BaseEntityLogged {
 	/** The user's email */
 	email: email;
 
@@ -96,11 +96,14 @@ export interface UserEntity<TPicture, TBanner, TPromo, TPerm, TRole, TSub, TLog>
 	subscriber_account?: string;
 
 	/** The user's permissions */
-	permissions: Collection<TPerm>;
+	permissions?: Collection<TPerm>;
 
 	/** The user's roles (sets of permissions) */
-	roles: Collection<TRole>;
+	roles?: Collection<TRole>;
 
 	/** The user's logs */
-	logs: Collection<TLog>;
+	logs?: Collection<TLog>;
+
+	/** The user's files visibility groups */
+	files_visibility_groups?: Collection<TVisibility>;
 }

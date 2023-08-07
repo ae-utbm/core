@@ -1,6 +1,20 @@
 import { BaseEntity } from '../base-entity';
 
-export interface FileEntity extends BaseEntity {
+export interface FileVisibilityGroupEntity<TUser> extends BaseEntity {
+	/** The visibility group's name */
+	name: Uppercase<string>;
+
+	/** The visibility group's description */
+	description?: string;
+
+	/** The visibility group's users */
+	users: Collection<TUser>;
+
+	/** The visibility group's files */
+	files: Collection<FileEntity<this>>;
+}
+
+export interface FileEntity<TVisibility> extends BaseEntity {
 	/** The file's filename */
 	filename: string;
 
@@ -13,8 +27,8 @@ export interface FileEntity extends BaseEntity {
 	/** The file's size */
 	size: number;
 
-	/** The file's visibility */
-	visibility: string;
+	/** The file's visibility, if null, the file is public */
+	visibility?: TVisibility;
 
 	/** The file's description */
 	description?: string;
