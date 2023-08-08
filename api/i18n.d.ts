@@ -2,60 +2,6 @@
 
 import { Path } from "nestjs-i18n";
 export type I18nTranslations = {
-    "responses 3": {
-        "errors": {
-            "birthday": {
-                "invalid": string;
-            };
-            "email": {
-                "invalid": string;
-                "used": string;
-                "not_found": string;
-                "verified": string;
-                "unverified": string;
-                "token": {
-                    "invalid": string;
-                };
-            };
-            "field": {
-                "missing": string;
-                "unexpected": string;
-            };
-            "id": {
-                "invalid": string;
-                "not_found": string;
-            };
-            "id_or_email": {
-                "missing": string;
-            };
-            "image": {
-                "invalid_aspect_ratio": string;
-                "invalid_mime_type": string;
-            };
-            "password": {
-                "mismatch": string;
-            };
-            "permission": {
-                "invalid": string;
-                "not_found_on_user": string;
-                "already_on_user": string;
-            };
-            "promotion": {
-                "logo_not_found": string;
-            };
-            "role": {
-                "name_used": string;
-            };
-            "jwt": {
-                "invalid": string;
-                "expired": string;
-                "unknown": string;
-            };
-        };
-        "success": {
-            "deleted": string;
-        };
-    };
     "responses": {
         "errors": {
             "birthday": {
@@ -109,35 +55,6 @@ export type I18nTranslations = {
         };
         "success": {
             "deleted": string;
-        };
-    };
-    "templates 3": {
-        "register_common": {
-            "subject": string;
-            "title": string;
-            "body": {
-                "text": string;
-                "questions": string;
-                "politeness": string;
-                "signature": string;
-            };
-        };
-        "register_user": {
-            "body": {
-                "text": string;
-                "link": {
-                    "text": string;
-                    "href": string;
-                };
-                "remark": string;
-                "info": string;
-            };
-        };
-        "register_user_by_admin": {
-            "body": {
-                "text": string;
-                "password": string;
-            };
         };
     };
     "templates": {
