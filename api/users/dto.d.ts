@@ -13,8 +13,8 @@ export interface UserPostDto {
 	/** The user's password */
 	password: string;
 
-	/** The user's birthday */
-	birthday: Date;
+	/** The user's birth date */
+	birth_date: Date;
 
 	/** The user's first name */
 	first_name: string;
@@ -33,8 +33,8 @@ export interface UserPatchDto extends UserPostDto {
 	/** The user's password */
 	password: string;
 
-	/** The user's birthday */
-	birthday: Date;
+	/** The user's birth date */
+	birth_date: Date;
 
 	/** The user's first name */
 	first_name: string;

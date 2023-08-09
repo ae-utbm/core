@@ -18,7 +18,7 @@ export interface UserVisibilityEntity<TUser> extends BaseEntityLogged {
 	user: TUser;
 
 	email: boolean;
-	birthday: boolean;
+	birth_date: boolean;
 	nickname: boolean;
 	gender: boolean;
 	pronouns: boolean;
@@ -45,8 +45,8 @@ export interface UserEntity<TPicture, TBanner, TPromo, TPerm, TRole, TSub, TLog,
 	/** The user's password */
 	password: string;
 
-	/** The user's birthday */
-	birthday: Date;
+	/** The user's birth_date */
+	birth_date: Date;
 
 	/** The user's first name */
 	first_name: string;
