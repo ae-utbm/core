@@ -4,7 +4,7 @@ import { Path } from "nestjs-i18n";
 export type I18nTranslations = {
     "responses": {
         "errors": {
-            "birthday": {
+            "birth_date": {
                 "invalid": string;
             };
             "email": {
