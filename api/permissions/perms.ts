@@ -75,6 +75,12 @@ export const PERMISSIONS = [
 		name: 'CAN_EDIT_PROMOTION',
 		description: 'Can edit a promotion (name, description, etc.)',
 	},
+
+	// FILES
+	{
+		name: 'CAN_READ_FILE',
+		description: 'Can read any file',
+	},
 ] as const;
 
 export const PERMISSIONS_NAMES: PERMISSION_NAMES[] = PERMISSIONS.map((p) => p.name);
