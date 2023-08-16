@@ -20,6 +20,11 @@ export type I18nTranslations = {
             "field": {
                 "missing": string;
                 "unexpected": string;
+                "not_found": string;
+            };
+            "file": {
+                "no_file": string;
+                "not_found_on_disk": string;
             };
             "id": {
                 "invalid": string;
