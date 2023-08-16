@@ -5,7 +5,7 @@ export interface FileVisibilityGroupEntity<TUser> extends BaseEntity {
 	name: Uppercase<string>;
 
 	/** The visibility group's description */
-	description?: string;
+	description: string;
 
 	/** The visibility group's users */
 	users: Collection<TUser>;
@@ -15,6 +15,9 @@ export interface FileVisibilityGroupEntity<TUser> extends BaseEntity {
 }
 
 export interface FileEntity<TVisibility> extends BaseEntity {
+	/** The file's description */
+	description: string;
+
 	/** The file's filename */
 	filename: string;
 
@@ -29,7 +32,4 @@ export interface FileEntity<TVisibility> extends BaseEntity {
 
 	/** The file's visibility, if null, the file is public */
 	visibility?: TVisibility;
-
-	/** The file's description */
-	description?: string;
 }
