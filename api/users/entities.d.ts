@@ -5,12 +5,12 @@ import type { email } from '@types';
 
 export interface UserPictureEntity<TUser> extends FileEntity {
 	/** The file's owner */
-	user: TUser;
+	picture_user: TUser;
 }
 
 export interface UserBannerEntity<TUser> extends FileEntity {
 	/** The file's owner */
-	user: TUser;
+	banner_user: TUser;
 }
 
 export interface UserVisibilityEntity<TUser> extends BaseEntityLogged {

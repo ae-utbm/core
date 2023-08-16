@@ -15,5 +15,5 @@ export interface PromotionEntity<TPicture, TUser> extends BaseEntity {
 
 export interface PromotionPictureEntity<TPromo> extends FileEntity {
 	/** Promotion to which the picture is attached */
-	promotion: TPromo;
+	picture_promotion: TPromo;
 }
