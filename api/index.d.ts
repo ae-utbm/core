@@ -1,4 +1,4 @@
-import type { email } from '@types';
+import type { UserEntity, email } from '@types';
 
 export * from './files';
 export * from './logs';
@@ -12,6 +12,10 @@ export * from './dto';
 export * from './base-entity';
 
 export * from './i18n';
+
+export type RequestWithUser = Request & {
+	user: UserEntity;
+};
 
 export interface JWTPayload {
 	/** The user id */
