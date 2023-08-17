@@ -17,10 +17,13 @@ export type I18nTranslations = {
                     "invalid": string;
                 };
             };
+            "entity": {
+                "not_found": string;
+            };
             "field": {
                 "missing": string;
                 "unexpected": string;
-                "not_found": string;
+                "invalid": string;
             };
             "file": {
                 "no_file": string;
