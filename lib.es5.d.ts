@@ -2,7 +2,6 @@
  * Fix wrong type definitions for toLowerCase and toUpperCase methods in lib.es5.d.ts
  * @see https://github.com/microsoft/TypeScript/issues/44268
  */
-
 interface String {
 	/** Converts all the alphabetic characters in a string to lowercase. */
 	toLowerCase(): Lowercase<string>;
