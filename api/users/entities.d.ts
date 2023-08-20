@@ -32,6 +32,7 @@ export interface UserVisibilityEntity<TUser> extends BaseEntityLogged {
 	promotion: boolean;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export interface UserEntity<TPicture, TBanner, TPromo, TPerm, TRole, TSub, TLog, TVisibility> extends BaseEntityLogged {
 	/** The user's email */
 	email: email;
@@ -58,7 +59,7 @@ export interface UserEntity<TPicture, TBanner, TPromo, TPerm, TRole, TSub, TLog,
 	nickname?: string;
 
 	/** The user's gender */
-	gender?: string;
+	gender?: 'MALE' | 'FEMALE' | 'OTHER';
 
 	/** The user's pronouns */
 	pronouns?: string;
@@ -90,10 +91,10 @@ export interface UserEntity<TPicture, TBanner, TPromo, TPerm, TRole, TSub, TLog,
 	promotion?: TPromo;
 
 	/** The user's subscription on the association */
-	subscriptions?: Collection<TSub>;
+	// subscriptions?: Collection<TSub>;
 
 	/** The user's subscription number */
-	subscriber_account?: string;
+	// subscriber_account?: string;
 
 	/** The user's permissions */
 	permissions?: Collection<TPerm>;
