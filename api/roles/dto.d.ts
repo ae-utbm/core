@@ -1,7 +1,7 @@
 import { PERMISSION_NAMES } from '../permissions';
 
 export interface RolePostDto {
-	name: Uppercase<string>;
+	name: string;
 	permissions: PERMISSION_NAMES[];
 	expires: Date;
 }
