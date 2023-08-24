@@ -19,7 +19,6 @@ export interface UserVisibilityEntity<TUser> extends BaseEntityLogged {
 
 	email: boolean;
 	birth_date: boolean;
-	nickname: boolean;
 	gender: boolean;
 	pronouns: boolean;
 
