@@ -78,13 +78,13 @@ export interface UserEntity<TPicture, TBanner, TPromo, TPerm, TRole, TSub, TLog,
 	/** The user's profile banner */
 	banner?: TBanner;
 
+	// TODO: use an entity relation with both cursus and specialty (called semester ?)
+	//* Should be a One to Many relation (one user can have multiple semester)
 	/** The user's cursus */
-	// TODO: might be a good idea to create a new entity for this
-	cursus?: string;
+	// cursus?: string;
 
 	/** The user's specialty at UTBM */
-	// TODO: might be a good idea to create a new entity for this
-	specialty?: string;
+	// specialty?: string;
 
 	/** The user's promotion */
 	promotion?: TPromo;
