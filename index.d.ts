@@ -5,6 +5,7 @@ import { TitleCase } from './casing';
 import 'jest-extended';
 
 export * from './api';
+export type * from 'file-type';
 
 export type aspect_ratio = `${number}:${number}`;
 export type email = `${string}@${string}.${string}`;

@@ -28,6 +28,8 @@ export type I18nTranslations = {
             "file": {
                 "no_file": string;
                 "not_found_on_disk": string;
+                "invalid_mime_type": string;
+                "undefined_mime_type": string;
             };
             "id": {
                 "invalid": string;
@@ -38,7 +40,6 @@ export type I18nTranslations = {
             };
             "image": {
                 "invalid_aspect_ratio": string;
-                "invalid_mime_type": string;
             };
             "password": {
                 "mismatch": string;
