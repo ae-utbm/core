@@ -30,6 +30,7 @@ export type I18nTranslations = {
                 "not_found_on_disk": string;
                 "invalid_mime_type": string;
                 "undefined_mime_type": string;
+                "infected": string;
             };
             "id": {
                 "invalid": string;
