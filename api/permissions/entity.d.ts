@@ -1,5 +1,5 @@
+import { PERMISSION_NAMES } from '.';
 import { BaseEntity } from '../base-entity';
-import { PERMISSION_NAMES } from '../permissions';
 
 /**
  * Entity used to store permissions attached to users

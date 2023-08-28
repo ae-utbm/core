@@ -1,21 +1,7 @@
 import type { HttpStatus, RequestMethod } from '@nestjs/common';
-import type { Class } from 'type-fest';
+import type { Class, TitleCase } from 'type-fest';
 
-import { TitleCase } from './casing';
 import 'jest-extended';
-
-export * from './api';
-export type * from 'file-type';
-
-export type aspect_ratio = `${number}:${number}`;
-export type email = `${string}@${string}.${string}`;
-
-export type KeysOf<T extends object> = Array<keyof T>;
-
-type StatusMessages_ = {
-	[Key in keyof typeof HttpStatus]: `${(typeof HttpStatus)[Key]} : ${TitleCase<Key>}`;
-};
-export type StatusMessages = StatusMessages_[keyof StatusMessages_];
 
 declare global {
 	declare namespace jest {
@@ -59,3 +45,15 @@ declare global {
 		}
 	}
 }
+
+export type aspect_ratio = `${number}:${number}`;
+export type email = `${string}@${string}.${string}`;
+
+export type KeysOf<T extends object> = Array<keyof T>;
+
+type StatusMessages_ = {
+	[Key in keyof typeof HttpStatus]: `${(typeof HttpStatus)[Key]} : ${TitleCase<Key>}`;
+};
+export type StatusMessages = StatusMessages_[keyof StatusMessages_];
+
+export * from './api';
