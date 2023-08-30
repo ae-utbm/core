@@ -8,6 +8,8 @@ export type I18nTranslations = {
                 "invalid": string;
             };
             "email": {
+                "blacklisted": string;
+                "malformed": string;
                 "invalid": string;
                 "used": string;
                 "not_found": string;
