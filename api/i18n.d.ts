@@ -38,9 +38,6 @@ export type I18nTranslations = {
                 "invalid": string;
                 "not_found": string;
             };
-            "id_or_email": {
-                "missing": string;
-            };
             "image": {
                 "invalid_aspect_ratio": string;
             };
