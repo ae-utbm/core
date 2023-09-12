@@ -40,7 +40,7 @@ declare global {
 				name:
 					| `${string} (e2e)` // Entity (e2e)
 					| `${string} (unit)` // Entity (unit)
-					| `.${string}()` // .method
+					| `.${string}()` // .method()
 					| `(${keyof typeof RequestMethod}) /${string}` // (GET) /routes
 					| StatusMessages, // 200 : Ok
 				fn: EmptyFunction,

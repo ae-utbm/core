@@ -1,7 +1,7 @@
+import type { email } from '#types/api';
 import type { BaseEntityLogged } from '../base-entity';
 import type { FileEntity } from '../files';
 import type { Collection } from '@mikro-orm/core';
-import type { email } from '#types/api';
 
 import { USER_GENDER } from '../../constants/genders';
 
