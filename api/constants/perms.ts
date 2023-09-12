@@ -1,4 +1,4 @@
-import type { PERMISSION_NAMES } from '.';
+import type { PERMISSION_NAMES } from '../@types/permissions';
 
 /**
  * This file contains all the permissions available in the API.

@@ -1,3 +1,17 @@
+// API types
+export * from './base-entity';
+export * from './files';
+export * from './i18n';
+export * from './logs';
+export * from './permissions';
+export * from './promotions';
+export * from './request';
+export * from './response';
+export * from './roles';
+export * from './subscriptions';
+export * from './users';
+
+//--- Global types override for the API only ---//
 import type { HttpStatus, RequestMethod } from '@nestjs/common';
 import type { Class, TitleCase } from 'type-fest';
 
@@ -46,14 +60,7 @@ declare global {
 	}
 }
 
-export type aspect_ratio = `${number}:${number}`;
-export type email = `${string}@${string}.${string}`;
-
-export type KeysOf<T extends object> = Array<keyof T>;
-
 type StatusMessages_ = {
 	[Key in keyof typeof HttpStatus]: `${(typeof HttpStatus)[Key]} : ${TitleCase<Key>}`;
 };
-export type StatusMessages = StatusMessages_[keyof StatusMessages_];
-
-export * from './api';
+type StatusMessages = StatusMessages_[keyof StatusMessages_];

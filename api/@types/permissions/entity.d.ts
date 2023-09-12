@@ -5,7 +5,7 @@ import { BaseEntity } from '../base-entity';
  * Entity used to store permissions attached to users
  * (used to check if a user has the required permissions to access a route)
  */
-export class PermissionEntity<TUser> extends BaseEntity {
+export interface PermissionEntity<TUser> extends BaseEntity {
 	/** Name of the permission, in caps */
 	name: PERMISSION_NAMES;
 

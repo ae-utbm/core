@@ -1,7 +1,9 @@
 import type { BaseEntityLogged } from '../base-entity';
 import type { FileEntity } from '../files';
 import type { Collection } from '@mikro-orm/core';
-import type { email } from '@types';
+import type { email } from '#types/api';
+
+import { USER_GENDER } from '../../constants/genders';
 
 export interface UserPictureEntity<TUser> extends FileEntity {
 	/** The file's owner */
@@ -58,7 +60,7 @@ export interface UserEntity<TPicture, TBanner, TPromo, TPerm, TRole, TSub, TLog,
 	nickname?: string;
 
 	/** The user's gender */
-	gender?: 'MALE' | 'FEMALE' | 'OTHER';
+	gender?: (typeof USER_GENDER)[number];
 
 	/** The user's pronouns */
 	pronouns?: string;

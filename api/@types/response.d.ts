@@ -1,4 +1,4 @@
-import { email } from '..';
+import { email } from '../../global/@types';
 
 export interface BaseResponseDto {
 	/** The entity ID */

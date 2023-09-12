@@ -1,6 +1,6 @@
-import { BaseEntity } from '../base-entity';
+import type { BaseEntity } from '../base-entity';
 
-export interface FileVisibilityGroupEntity<TUser> extends BaseEntity {
+export interface FileVisibilityGroupEntity<TUser extends object> extends BaseEntity {
 	/** The visibility group's name */
 	name: Uppercase<string>;
 

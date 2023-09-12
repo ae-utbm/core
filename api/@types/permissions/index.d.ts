@@ -1,7 +1,7 @@
 export * from './entity';
 export * from './dto';
 
-import { PERMISSIONS } from './perms';
+import { PERMISSIONS } from '../../constants/perms';
 
 /**
  * How permissions are registered in the API
