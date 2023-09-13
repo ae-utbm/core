@@ -41,6 +41,11 @@ export type I18nTranslations = {
             "image": {
                 "invalid_aspect_ratio": string;
             };
+            "jwt": {
+                "invalid": string;
+                "expired": string;
+                "unknown": string;
+            };
             "password": {
                 "mismatch": string;
                 "weak": string;
@@ -56,10 +61,8 @@ export type I18nTranslations = {
             "role": {
                 "name_used": string;
             };
-            "jwt": {
-                "invalid": string;
-                "expired": string;
-                "unknown": string;
+            "user": {
+                "cannot_update_birth_date_or_name": string;
             };
         };
         "success": {
