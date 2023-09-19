@@ -14,8 +14,8 @@ devDependencies:
     specifier: ^5.8.1
     version: 5.8.1
   nestjs-i18n:
-    specifier: ^10.3.2
-    version: 10.3.2(@nestjs/common@10.2.5)(@nestjs/core@10.2.5)(class-validator@0.14.0)(rxjs@7.8.1)
+    specifier: ^10.3.4
+    version: 10.3.4(@nestjs/common@10.2.5)(@nestjs/core@10.2.5)(class-validator@0.14.0)(rxjs@7.8.1)
 
 packages:
 
@@ -423,8 +423,8 @@ packages:
     engines: {node: '>= 14.0.0'}
     dev: true
 
-  /nestjs-i18n@10.3.2(@nestjs/common@10.2.5)(@nestjs/core@10.2.5)(class-validator@0.14.0)(rxjs@7.8.1):
-    resolution: {integrity: sha512-hb9/picKv4pzPI+r5KpZJYjNCTRFEEmuyqgN/VUL7LFOyINPTIV5h7U8h6sdrDQr+bGdHLUKk4Dk3d9jItQEfg==}
+  /nestjs-i18n@10.3.4(@nestjs/common@10.2.5)(@nestjs/core@10.2.5)(class-validator@0.14.0)(rxjs@7.8.1):
+    resolution: {integrity: sha512-FEkJYZCDflELC9J5gOOcwDUzbNy2pwSvrOETsfESoeZl4qX+reiicgIR2xECP1x31lKjtP0FMlwi8cXuBhVqkA==}
     engines: {node: '>=16'}
     peerDependencies:
       '@nestjs/common': '*'

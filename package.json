@@ -5,7 +5,7 @@
   "license": "GPL v3",
   "devDependencies": {
     "@mikro-orm/core": "^5.8.1",
-    "nestjs-i18n": "^10.3.2"
+    "nestjs-i18n": "^10.3.4"
   },
   "dependencies": {
     "type-fest": "^4.3.1"
