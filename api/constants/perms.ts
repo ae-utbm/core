@@ -1,3 +1,5 @@
+/* istanbul ignore file */
+
 import type { PERMISSION_NAMES } from '../@types/permissions';
 
 /**
