@@ -1,4 +1,5 @@
-import type { BaseResponseDto, PromotionEntity, PromotionPictureEntity } from '#types/api';
+import type { PromotionEntity, PromotionPictureEntity } from './entities';
+import type { BaseResponseDto } from '../response';
 
 export interface PromotionResponseDto extends BaseResponseDto {
 	/** Promotion number */

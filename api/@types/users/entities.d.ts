@@ -1,4 +1,4 @@
-import type { email } from '#types/api';
+import type { email } from '../../../global/@types';
 import type { BaseEntityLogged } from '../base-entity';
 import type { FileEntity } from '../files';
 import type { Collection } from '@mikro-orm/core';
