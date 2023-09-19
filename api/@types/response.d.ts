@@ -14,6 +14,9 @@ export interface BaseResponseDto {
 export interface MessageResponseDto {
 	/** The message */
 	message: string;
+
+	/** The status code */
+	statusCode: number;
 }
 
 export interface JWTPayload {
