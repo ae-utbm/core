@@ -12,6 +12,7 @@ export type I18nTranslations = {
                 "malformed": string;
                 "invalid": string;
                 "used": string;
+                "are_used": string;
                 "not_found": string;
                 "verified": string;
                 "unverified": string;
