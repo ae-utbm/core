@@ -7,8 +7,8 @@ export interface BaseEntity {
 	id: number;
 
 	/** The creation date */
-	created_at: Date;
+	created: Date;
 
 	/** The last update date */
-	updated_at: Date;
+	updated: Date;
 }

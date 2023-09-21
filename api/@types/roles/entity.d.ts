@@ -7,9 +7,6 @@ export interface RoleEntity<TPerm, TUser> extends BaseEntity {
 	/** Determine wether the role is still active */
 	revoked: boolean;
 
-	/** Specify when the role should expires */
-	expires: Date;
-
 	/** List of permissions for that role */
 	permissions: Collection<TPerm>;
 

@@ -5,10 +5,10 @@ export interface BaseResponseDto {
 	id: number;
 
 	/** The entity updated date */
-	updated_at: Date;
+	updated: Date;
 
 	/** The entity created date */
-	created_at: Date;
+	created: Date;
 }
 
 export interface MessageResponseDto {

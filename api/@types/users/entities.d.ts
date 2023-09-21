@@ -100,7 +100,7 @@ export interface UserEntity<TPicture, TBanner, TPromo, TPerm, TRole, TSub, TLog,
 	/** The user's permissions */
 	permissions?: Collection<TPerm>;
 
-	/** The user's roles (sets of permissions) */
+	/** The user's roles */
 	roles?: Collection<TRole>;
 
 	/** The user's logs */
