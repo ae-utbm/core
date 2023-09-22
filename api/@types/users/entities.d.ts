@@ -1,5 +1,5 @@
 import type { email } from '../../../global/@types';
-import type { BaseEntityLogged } from '../base-entity';
+import type { BaseEntity } from '../base-entity';
 import type { FileEntity } from '../files';
 import type { Collection } from '@mikro-orm/core';
 
@@ -15,7 +15,7 @@ export interface UserBannerEntity<TUser> extends FileEntity {
 	banner_user: TUser;
 }
 
-export interface UserVisibilityEntity<TUser> extends BaseEntityLogged {
+export interface UserVisibilityEntity<TUser> extends BaseEntity {
 	/** The concerned user */
 	user: TUser;
 
@@ -34,7 +34,7 @@ export interface UserVisibilityEntity<TUser> extends BaseEntityLogged {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export interface UserEntity<TPicture, TBanner, TPromo, TPerm, TRole, TSub, TLog, TVisibility> extends BaseEntityLogged {
+export interface UserEntity<TPicture, TBanner, TPromo, TPerm, TRole, TSub, TLog, TVisibility> extends BaseEntity {
 	/** The user's email */
 	email: email;
 

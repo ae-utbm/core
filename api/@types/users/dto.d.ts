@@ -28,19 +28,19 @@ export interface UserPatchDto extends UserPostDto {
 	id: number;
 
 	/** The user's email */
-	email: string;
+	email?: string;
 
 	/** The user's password */
-	password: string;
+	password?: string;
 
 	/** The user's birth date */
-	birth_date: Date;
+	birth_date?: Date;
 
 	/** The user's first name */
-	first_name: string;
+	first_name?: string;
 
 	/** The user's last name */
-	last_name: string;
+	last_name?: string;
 
 	/** The user's nickname */
 	nickname?: string;
