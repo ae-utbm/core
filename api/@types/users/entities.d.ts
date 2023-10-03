@@ -28,8 +28,9 @@ export interface UserVisibilityEntity<TUser> extends BaseEntity {
 	phone: boolean;
 	parent_contact: boolean;
 
-	cursus: boolean;
-	specialty: boolean;
+	// TODO: use an entity relation with both cursus and specialty (called semester ?)
+	// cursus: boolean;
+	// specialty: boolean;
 	promotion: boolean;
 }
 
