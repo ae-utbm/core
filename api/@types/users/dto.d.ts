@@ -1,3 +1,8 @@
+import { UserVisibilityEntity } from './entities';
+import { BaseEntity } from '../base-entity';
+
+export interface UserVisibilityPatchDto extends Omit<UserVisibilityEntity<unknown>, 'user' | keyof BaseEntity> {}
+
 export interface UserSignInDto {
 	/** The user's email */
 	email: string;
@@ -60,13 +65,12 @@ export interface UserPatchDto extends UserPostDto {
 	/** The user's parent contact (for minors only) */
 	parent_contact?: string;
 
-	/** The user's cursus */
 	// TODO: might be a good idea to create a new entity for this
-	cursus?: string;
+	// /** The user's cursus */
+	// cursus?: string;
 
-	/** The user's specialty at UTBM */
-	// TODO: might be a good idea to create a new entity for this
-	specialty?: string;
+	// /** The user's specialty at UTBM */
+	// specialty?: string;
 
 	/** The user's promotion */
 	promotion?: number;
