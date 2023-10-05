@@ -36,6 +36,9 @@ export interface UserVisibilityEntity<TUser> extends BaseEntity {
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export interface UserEntity<TPicture, TBanner, TPromo, TPerm, TRole, TSub, TLog, TVisibility> extends BaseEntity {
+	/** Account verified: not null if the user has verified its email address at least once */
+	verified?: Date;
+
 	/** The user's email */
 	email: email;
 

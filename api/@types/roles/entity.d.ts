@@ -1,6 +1,7 @@
-import { BaseEntity } from '../base-entity';
+import type { BaseEntity } from '../base-entity';
+import type { PERMISSION_NAMES } from '../permissions';
 
-export interface RoleEntity<TPerm, TUser> extends BaseEntity {
+export interface RoleEntity<TUser> extends BaseEntity {
 	/** Name of the role, in caps */
 	name: string;
 
@@ -8,7 +9,7 @@ export interface RoleEntity<TPerm, TUser> extends BaseEntity {
 	revoked: boolean;
 
 	/** List of permissions for that role */
-	permissions: Collection<TPerm>;
+	permissions: Array<PERMISSION_NAMES>;
 
 	/** Users with that role **/
 	users: Collection<TUser>;

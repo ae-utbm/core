@@ -73,14 +73,28 @@ export type I18nTranslations = {
         };
     };
     "templates": {
+        "common": {
+            "politeness": string;
+            "signature": string;
+            "questions": string;
+            "info": string;
+        };
+        "email_changed": {
+            "subject": string;
+            "title": string;
+            "body": {
+                "text": string;
+                "link": {
+                    "text": string;
+                    "href": string;
+                };
+            };
+        };
         "register_common": {
             "subject": string;
             "title": string;
             "body": {
                 "text": string;
-                "questions": string;
-                "politeness": string;
-                "signature": string;
             };
         };
         "register_user": {
@@ -91,7 +105,6 @@ export type I18nTranslations = {
                     "href": string;
                 };
                 "remark": string;
-                "info": string;
             };
         };
         "register_user_by_admin": {

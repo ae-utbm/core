@@ -1,5 +1,6 @@
 import { UserVisibilityEntity } from './entities';
 import { BaseEntity } from '../base-entity';
+import { PERMISSION_NAMES } from '../permissions';
 
 export interface UserVisibilityPatchDto extends Omit<UserVisibilityEntity<unknown>, 'user' | keyof BaseEntity> {}
 
@@ -9,6 +10,20 @@ export interface UserSignInDto {
 
 	/** The user's password */
 	password: string;
+}
+
+export interface UserRolesGetDto extends BaseEntity {
+	/** Name of the role */
+	name: Uppercase<string>;
+
+	/** Date of expiration of the role on that user */
+	expires: Date;
+
+	/** True if the role has been revoked */
+	revoked: boolean;
+
+	/** List of permissions in that role */
+	permissions: Array<PERMISSION_NAMES>;
 }
 
 export interface UserPostDto {
