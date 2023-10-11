@@ -22,6 +22,7 @@ export interface MessageResponseDto {
 export interface JWTPayload {
 	/** The user id */
 	sub: number;
+
 	/** The user email */
 	email: email;
 

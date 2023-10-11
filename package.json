@@ -4,10 +4,10 @@
   "private": true,
   "license": "GPL v3",
   "devDependencies": {
-    "@mikro-orm/core": "^5.8.5",
-    "nestjs-i18n": "^10.3.4"
+    "@mikro-orm/core": "^5.8.7",
+    "nestjs-i18n": "^10.3.6"
   },
   "dependencies": {
-    "type-fest": "^4.3.1"
+    "type-fest": "^4.4.0"
   }
 }
