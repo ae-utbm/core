@@ -80,7 +80,7 @@ export interface UserPatchDto extends UserPostDto {
 	/** The user's parent contact (for minors only) */
 	parent_contact?: string;
 
-	// TODO: might be a good idea to create a new entity for this
+	// TODO: (KEY: 1) Make a PR to implement cursus & specialty in the API
 	// /** The user's cursus */
 	// cursus?: string;
 

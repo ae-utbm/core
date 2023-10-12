@@ -28,7 +28,7 @@ export interface UserVisibilityEntity<TUser> extends BaseEntity {
 	phone: boolean;
 	parent_contact: boolean;
 
-	// TODO: use an entity relation with both cursus and specialty (called semester ?)
+	// TODO: (KEY: 1) Make a PR to implement cursus & specialty in the API
 	// cursus: boolean;
 	// specialty: boolean;
 	promotion: boolean;
@@ -36,7 +36,7 @@ export interface UserVisibilityEntity<TUser> extends BaseEntity {
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export interface UserEntity<TPicture, TBanner, TPromo, TPerm, TRole, TSub, TLog, TVisibility> extends BaseEntity {
-	/** Account verified: not null if the user has verified its email address at least once */
+	/** Account verified: not null if the user has verified his email address at least once */
 	verified?: Date;
 
 	/** The user's email */
@@ -84,7 +84,7 @@ export interface UserEntity<TPicture, TBanner, TPromo, TPerm, TRole, TSub, TLog,
 	/** The user's profile banner */
 	banner?: TBanner;
 
-	// TODO: use an entity relation with both cursus and specialty (called semester ?)
+	// TODO: (KEY: 1) Make a PR to implement cursus & specialty in the API
 	//* Should be a One to Many relation (one user can have multiple semester)
 	/** The user's cursus */
 	// cursus?: string;
@@ -100,6 +100,9 @@ export interface UserEntity<TPicture, TBanner, TPromo, TPerm, TRole, TSub, TLog,
 
 	/** The user's subscription number */
 	// subscriber_account?: string;
+
+	// TODO: (KEY: 2) Make a PR to implement subscriptions in the API
+	subscribed: boolean;
 
 	/** The user's permissions */
 	permissions?: Collection<TPerm>;

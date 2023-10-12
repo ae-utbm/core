@@ -29,11 +29,12 @@ export type I18nTranslations = {
                 "invalid": string;
             };
             "file": {
+                "infected": string;
+                "invalid_mime_type": string;
                 "no_file": string;
                 "not_found_on_disk": string;
-                "invalid_mime_type": string;
                 "undefined_mime_type": string;
-                "infected": string;
+                "unauthorized": string;
             };
             "id": {
                 "invalid": string;
@@ -66,6 +67,8 @@ export type I18nTranslations = {
             };
             "user": {
                 "cannot_update_birth_date_or_name": string;
+                "no_picture": string;
+                "no_banner": string;
             };
         };
         "success": {
