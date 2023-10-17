@@ -35,19 +35,19 @@ describe('Array (unit)', () => {
 		});
 	});
 
-	describe('.haveEqualObjects()', () => {
+	describe('.isUniform()', () => {
 		it('should return true if all objects in the array have the same type', () => {
-			expect([].haveEqualObjects()).toBe(true);
-			expect([{ a: 1 }, { a: 2 }].haveEqualObjects()).toBe(true);
+			expect([].isUniform()).toBe(true);
+			expect([{ a: 1 }, { a: 2 }].isUniform()).toBe(true);
 		});
 
 		it('should return false if not all objects in the array have the same type', () => {
-			expect([{ a: 1 }, { a: 2, b: 'unexpected' }].haveEqualObjects()).toBe(false);
+			expect([{ a: 1 }, { a: 2, b: 'unexpected' }].isUniform()).toBe(false);
 			expect(
 				[
 					{ a: 1, c: 2 },
 					{ a: 3, b: 'unexpected' },
-				].haveEqualObjects(),
+				].isUniform(),
 			).toBe(false);
 		});
 	});

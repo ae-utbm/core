@@ -24,13 +24,13 @@ declare global {
 		shuffle(): T[];
 
 		/**
-		 * Returns true if all objects in the array have the same type.
-		 * @returns {boolean} True if all elements in the array have the same type.
-		 * @example [].haveEqualObjects() // true
-		 * @example [{ a: 1 }, { a: 2 }].haveEqualObjects() // true
-		 * @example [{ a: 1 }, { a: 2, b: 'unexpected' }].haveEqualObjects() // false
+		 * Determines if the array is uniform.
+		 * @returns {boolean} True if all elements in the array are of the same type.
+		 * @example [].isUniform() // true
+		 * @example [{ a: 1 }, { a: 2 }].isUniform() // true
+		 * @example [{ a: 1 }, { a: 2, b: 'unexpected' }].isUniform() // false
 		 */
-		haveEqualObjects(): boolean;
+		isUniform(): boolean;
 	}
 }
 
@@ -74,8 +74,8 @@ if (!Array.prototype.shuffle) {
 	};
 }
 
-if (!Array.prototype.haveEqualObjects) {
-	Array.prototype.haveEqualObjects = function <T>(this: T[]): boolean {
+if (!Array.prototype.isUniform) {
+	Array.prototype.isUniform = function <T>(this: T[]): boolean {
 		if (this.length === 0) return true;
 		const keysToHave = Object.keys(this[0]);
 
