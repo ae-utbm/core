@@ -67,6 +67,7 @@ export type I18nTranslations = {
             };
             "user": {
                 "cannot_update_birth_date_or_name": string;
+                "picture_cooldown": string;
                 "no_picture": string;
                 "no_banner": string;
             };
