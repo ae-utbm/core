@@ -1,4 +1,4 @@
-import * as crypto from 'crypto';
+import * as crypto from 'node:crypto';
 
 /**
  * Safely generates a random integer between the given range.
