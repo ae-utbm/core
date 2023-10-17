@@ -14,9 +14,9 @@ export interface FileVisibilityGroupEntity<TUser extends object> extends BaseEnt
 	files: Collection<FileEntity<this>>;
 }
 
-export interface FileEntity<TVisibility> extends BaseEntity {
+export interface FileEntity<TVisibility, TOwner> extends BaseEntity {
 	/** The file's description */
-	description: string;
+	description?: string;
 
 	/** The file's filename */
 	filename: string;
@@ -32,4 +32,7 @@ export interface FileEntity<TVisibility> extends BaseEntity {
 
 	/** The file's visibility, if null, the file is public */
 	visibility?: TVisibility;
+
+	/** The file's owner */
+	owner: TOwner;
 }
