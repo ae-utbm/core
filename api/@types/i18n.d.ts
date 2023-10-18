@@ -23,11 +23,6 @@ export type I18nTranslations = {
             "entity": {
                 "not_found": string;
             };
-            "field": {
-                "missing": string;
-                "unexpected": string;
-                "invalid": string;
-            };
             "file": {
                 "infected": string;
                 "invalid_mime_type": string;
