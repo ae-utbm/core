@@ -1,0 +1,13 @@
+{
+  "name": "@ae_utbm/typings",
+  "version": "1.0.0",
+  "private": true,
+  "license": "GPL v3",
+  "devDependencies": {
+    "@mikro-orm/core": "^5.8.9",
+    "nestjs-i18n": "^10.3.6"
+  },
+  "dependencies": {
+    "type-fest": "^4.4.0"
+  }
+}

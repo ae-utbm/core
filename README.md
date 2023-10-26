@@ -1,12 +1,10 @@
 # Typings
 
-Ce répertoire est conçu pour héberger les types TypeScript utilisés entre différents projets pour l'association des étudiants, tels que l'API et le Sith 4.
+Repository that contains all typings & constants variables used across all projects of the AE UTBM.
 
 ## Installation
 
-Pour installer ce projet, suivez les étapes suivantes :
-
 ```bash
-# Cloner le projet en tant que sous-module dans le dossier src/types
-git submodule add https://github.com/ae-utbm/typings.git "src/types"
+# Where <TARGET_DIR> is the directory where you want to install the repository
+git submodule add https://github.com/ae-utbm/typings.git '<TARGET_DIR>'
 ```
