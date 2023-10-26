@@ -16,7 +16,7 @@ export interface MessageResponseDto {
 	message: string;
 
 	/** The status code */
-	statusCode: number;
+	status_code: number;
 }
 
 export interface JWTPayload {
