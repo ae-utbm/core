@@ -8,13 +8,13 @@ export type I18nTranslations = {
                 "invalid": string;
             };
             "email": {
+                "already_verified": string;
                 "blacklisted": string;
                 "malformed": string;
                 "invalid": string;
                 "used": string;
                 "are_used": string;
                 "not_found": string;
-                "verified": string;
                 "unverified": string;
                 "token": {
                     "invalid": string;
@@ -69,6 +69,9 @@ export type I18nTranslations = {
         };
         "success": {
             "deleted": string;
+            "email": {
+                "verified": string;
+            };
         };
     };
     "templates": {
