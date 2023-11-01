@@ -1,6 +1,5 @@
 // API types
 export * from './i18n';
-export * from './request';
 export * from './response';
 
 //--- Global types override for the API only ---//
@@ -16,10 +15,6 @@ export * from './dto';
 export * from './i18n';
 
 export type PERMISSION_NAMES = (typeof PERMISSIONS)[number]['name'];
-
-export type RequestWithUser = Express.Request & {
-	user: unknown;
-};
 
 export interface JWTPayload {
 	/** The user id */
