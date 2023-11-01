@@ -1,24 +1,5 @@
 import { email } from '../../global/@types';
 
-export interface BaseResponseDto {
-	/** The entity ID */
-	id: number;
-
-	/** The entity updated date */
-	updated: Date;
-
-	/** The entity created date */
-	created: Date;
-}
-
-export interface MessageResponseDto {
-	/** The message */
-	message: string;
-
-	/** The status code */
-	status_code: number;
-}
-
 export interface JWTPayload {
 	/** The user id */
 	sub: number;
