@@ -1,6 +1,6 @@
 export interface ILogDTO {
 	/** The user ID who made the action */
-	user: number;
+	user_id: number;
 
 	/** The action made by the user */
 	action: string;

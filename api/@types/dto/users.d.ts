@@ -1,12 +1,10 @@
 import type { IBaseResponseDTO, IFileGetDTO } from '.';
 import type { PERMISSION_NAMES } from '..';
+import type { genders } from '../../constants/genders';
 
 export interface ICreateUserDTO {
 	/** The user's email */
 	email: string;
-
-	/** The user's password */
-	password: string;
 
 	/** The user's birth date */
 	birth_date: Date;
@@ -35,14 +33,17 @@ export interface IBaseUserDTO extends IBaseResponseDTO {
 }
 
 export interface IUserGetDTO extends IBaseUserDTO {
-	picture?: number;
-	banner?: number;
-	email: email;
-	email_verified: boolean;
-	birth_date: Date;
-	gender?: (typeof USER_GENDER)[number];
+	full_name: string;
+	picture_id?: number;
+	banner_id?: number;
+	email?: email;
+	email_verified?: boolean;
+	is_minor: boolean;
+	birth_date?: Date;
+	age: number;
+	gender?: genders;
 	pronouns?: string;
-	promotion?: number;
+	promotion_id?: number;
 	last_seen?: Date;
 	subscribed: boolean; // TODO: (KEY: 2) Make a PR to implement subscriptions in the API
 	secondary_email?: email;
@@ -50,6 +51,9 @@ export interface IUserGetDTO extends IBaseUserDTO {
 	parent_contact?: string;
 	verified?: Date;
 }
+
+export type IUserGetPrivateDTO = IUserGetDTO &
+	Required<Pick<IUserGetDTO, keyof Omit<IUserVisibilityGetDTO, 'user_id'>>>;
 
 export interface IUserRoleGetDTO extends IBaseResponseDTO {
 	/** Name of the role */
@@ -68,7 +72,7 @@ export interface IUserRoleGetDTO extends IBaseResponseDTO {
 export interface IUserPatchDTO extends IUserGetDTO {}
 
 export interface IUserVisibilityGetDTO {
-	user: number;
+	user_id: number;
 	email: boolean;
 	secondary_email: boolean;
 	birth_date: boolean;
@@ -82,9 +86,9 @@ export interface IUserVisibilityGetDTO {
 export interface IUserVisibilityPatchDTO extends IUserVisibilityGetDTO {}
 
 export interface IUserPictureResponseDTO extends IFileGetDTO {
-	picture_user: number;
+	picture_user_id: number;
 }
 
 export interface IUserBannerResponseDTO extends IFileGetDTO {
-	banner_user: number;
+	banner_user_id: number;
 }

@@ -40,5 +40,5 @@ export interface IRoleGetDTO {
 	permissions: PERMISSION_NAMES[];
 
 	/** Specify to which user the role is attached */
-	users: number;
+	users_count: number;
 }

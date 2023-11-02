@@ -5,12 +5,12 @@ export interface IPromotionResponseDTO extends IBaseResponseDTO {
 	number: number;
 
 	/** Users in promotion */
-	users: number;
+	users_count: number;
 
 	/** Promotion picture id */
-	picture?: number;
+	picture_id?: number;
 }
 
 export interface IPromotionPictureResponseDTO extends IFileGetDTO {
-	picture_promotion: number;
+	picture_promotion_id: number;
 }

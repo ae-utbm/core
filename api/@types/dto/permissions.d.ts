@@ -36,7 +36,7 @@ export interface IPermissionGetDTO extends IBaseResponseDTO {
 	expires: Date;
 
 	/** The user ID who has the permission */
-	user: number;
+	user_id: number;
 }
 
 export interface IPermissionsOfRoleDTO {

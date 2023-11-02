@@ -9,7 +9,7 @@ export interface IFileGetDTO extends IBaseResponseDTO {
 
 	size: number;
 
-	visibility?: number;
+	visibility_id?: number;
 
 	description?: string;
 }
@@ -19,7 +19,7 @@ export class IFileVisibilityGroupGetDTO extends IBaseResponseDTO {
 
 	description: string;
 
-	users: number;
+	users_count: number;
 
-	files: number;
+	files_count: number;
 }

@@ -72,6 +72,9 @@ export type I18nTranslations = {
             "email": {
                 "verified": string;
             };
+            "user": {
+                "register": string;
+            };
         };
     };
     "templates": {

@@ -17,7 +17,7 @@ export * from './i18n';
 export type PERMISSION_NAMES = (typeof PERMISSIONS)[number]['name'];
 
 export interface JWTPayload {
-	/** The user id */
+	/** The user ID */
 	sub: number;
 
 	/** The user email */
