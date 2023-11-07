@@ -6,7 +6,7 @@ export * from './promotions';
 export * from './roles';
 export * from './users';
 
-export interface IBaseResponseDTO {
+export interface OutputBaseDto {
 	/** The entity ID */
 	id: number;
 
@@ -17,7 +17,7 @@ export interface IBaseResponseDTO {
 	created: Date;
 }
 
-export interface IMessageResponseDTO {
+export interface OutputResponseDto {
 	/** The message */
 	message: string;
 
@@ -25,7 +25,7 @@ export interface IMessageResponseDTO {
 	statusCode: number;
 }
 
-export interface IErrorResponseDTO extends IMessageResponseDTO {
-	/** The error */
-	error: string;
+export interface OutputErrorResponseDto extends OutputResponseDto {
+	/** The errors (if there is more than one) */
+	errors: string[];
 }

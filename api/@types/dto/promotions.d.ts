@@ -1,6 +1,6 @@
-import type { IBaseResponseDTO, IFileGetDTO } from '.';
+import type { OutputBaseDto, OutputFileDto } from '.';
 
-export interface IPromotionResponseDTO extends IBaseResponseDTO {
+export interface OutputPromotionDto extends OutputBaseDto {
 	/** Promotion number */
 	number: number;
 
@@ -11,6 +11,6 @@ export interface IPromotionResponseDTO extends IBaseResponseDTO {
 	picture_id?: number;
 }
 
-export interface IPromotionPictureResponseDTO extends IFileGetDTO {
+export interface OutputPromotionPictureDto extends OutputFileDto {
 	picture_promotion_id: number;
 }

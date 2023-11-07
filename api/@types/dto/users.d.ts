@@ -1,10 +1,9 @@
-import type { IBaseResponseDTO, IFileGetDTO } from '.';
-import type { PERMISSION_NAMES } from '..';
-import type { genders } from '../../constants/genders';
+import type { OutputBaseDto, OutputFileDto } from '.';
+import type { GENDERS, PERMISSION_NAMES } from '..';
 
-export interface ICreateUserDTO {
+export interface InputRegisterUserAdminDto {
 	/** The user's email */
-	email: string;
+	email: email;
 
 	/** The user's birth date */
 	birth_date: Date;
@@ -16,12 +15,26 @@ export interface ICreateUserDTO {
 	last_name: string;
 }
 
-export interface ICreateUserByAdminDTO extends ICreateUserDTO {
-	/** Pregenerated password */
+export interface InputRegisterUsersAdminDto {
+	users: InputRegisterUserAdminDto[];
+}
+
+export interface InputRegisterUserDto extends InputRegisterUserAdminDto {
+	/** The user's password */
 	password: string;
 }
 
-export interface IBaseUserDTO extends IBaseResponseDTO {
+// We extends InputRegisterUserAdminDto as the password is not included as it should be updated
+// with the password endpoint
+export interface InputUpdateUserDto
+	extends Partial<InputRegisterUserAdminDto>,
+		Partial<Pick<Required<OutputUserDto>, keyof OutputUserVisibilityDto>> {}
+
+export interface InputUpdateUsersDto {
+	users: InputUpdateUserDto[];
+}
+
+export interface OutputBaseUserDto extends OutputBaseDto {
 	/** User's first name */
 	first_name: string;
 
@@ -32,30 +45,60 @@ export interface IBaseUserDTO extends IBaseResponseDTO {
 	nickname?: string;
 }
 
-export interface IUserGetDTO extends IBaseUserDTO {
+export interface OutputUserDto extends OutputBaseUserDto {
+	/** User full name (first name + last name) */
 	full_name: string;
+
+	/** User's profile picture ID */
 	picture_id?: number;
+
+	/** User's banner picture ID */
 	banner_id?: number;
+
+	/** User's email */
 	email?: email;
+
+	/** True if the email has been verified */
 	email_verified?: boolean;
+
+	/** True if the user is a minor */
 	is_minor: boolean;
+
+	/** User's birth date */
 	birth_date?: Date;
+
+	/** User's age */
 	age: number;
-	gender?: genders;
+
+	/** User gender */
+	gender?: GENDERS;
+
+	/** User's pronouns */
 	pronouns?: string;
+
+	/** User's promotion ID */
 	promotion_id?: number;
+
+	/** User's phone number */
 	last_seen?: Date;
+
+	/** True if the user is subscribed */
 	subscribed: boolean; // TODO: (KEY: 2) Make a PR to implement subscriptions in the API
+
+	/** User's secondary email */
 	secondary_email?: email;
+
+	/** User's phone number */
 	phone?: string;
-	parent_contact?: string;
+
+	/** User's parent contact */
+	parents_phone?: string;
+
+	/** Date of verification of the user, null if not verified */
 	verified?: Date;
 }
 
-export type IUserGetPrivateDTO = IUserGetDTO &
-	Required<Pick<IUserGetDTO, keyof Omit<IUserVisibilityGetDTO, 'user_id'>>>;
-
-export interface IUserRoleGetDTO extends IBaseResponseDTO {
+export interface OutputUserRoleDto extends OutputBaseDto {
 	/** Name of the role */
 	name: Uppercase<string>;
 
@@ -69,26 +112,43 @@ export interface IUserRoleGetDTO extends IBaseResponseDTO {
 	permissions: Array<PERMISSION_NAMES>;
 }
 
-export interface IUserPatchDTO extends IUserGetDTO {}
-
-export interface IUserVisibilityGetDTO {
+export interface OutputUserVisibilityDto {
+	/** The User ID */
 	user_id: number;
+
+	/** User's email visibility */
 	email: boolean;
+
+	/** User's secondary email visibility */
 	secondary_email: boolean;
+
+	/** User's birth date visibility */
 	birth_date: boolean;
+
+	/** User's gender visibility */
 	gender: boolean;
+
+	/** User's pronouns visibility */
 	pronouns: boolean;
+
+	/** User's promotion visibility */
 	promotion: boolean;
+
+	/** User's phone visibility */
 	phone: boolean;
-	parent_contact: boolean;
+
+	/** User's parent contact visibility */
+	parents_phone: boolean;
 }
 
-export interface IUserVisibilityPatchDTO extends IUserVisibilityGetDTO {}
+export interface InputUpdateUserVisibilityDto extends Omit<OutputUserVisibilityDto, 'user_id'> {}
 
-export interface IUserPictureResponseDTO extends IFileGetDTO {
+export interface OutputUserPictureDto extends OutputFileDto {
+	/** User owner ID */
 	picture_user_id: number;
 }
 
-export interface IUserBannerResponseDTO extends IFileGetDTO {
+export interface OutputUserBannerDto extends OutputFileDto {
+	/** User owner ID */
 	banner_user_id: number;
 }

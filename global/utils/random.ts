@@ -1,4 +1,5 @@
-import * as crypto from 'node:crypto';
+// Crypto is a node native module, use webpack's node polyfill to use it in the browser
+import * as crypto from 'crypto';
 
 /**
  * Safely generates a random integer between the given range.

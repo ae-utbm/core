@@ -1,4 +1,4 @@
-export interface ILogDTO {
+export interface OutputLogDto {
 	/** The user ID who made the action */
 	user_id: number;
 

@@ -1,6 +1,6 @@
-import type { IBaseUserDTO, PERMISSION_NAMES } from '..';
+import type { OutputBaseUserDto, PERMISSION_NAMES } from '..';
 
-export interface IRolePostDTO {
+export interface InputCreateRoleDto {
 	/** Name of the role, capitalized */
 	name: Uppercase<string>;
 
@@ -8,12 +8,12 @@ export interface IRolePostDTO {
 	permissions: PERMISSION_NAMES[];
 }
 
-export interface IRolePatchDTO extends IRolePostDTO {
+export interface InputUpdateRoleDto extends InputCreateRoleDTO {
 	/** ID of the role */
 	id: number;
 }
 
-export interface IRoleEditUserDTO {
+export interface InputUpdateRoleUserDto {
 	/** ID of the user */
 	id: number;
 
@@ -21,15 +21,22 @@ export interface IRoleEditUserDTO {
 	expires: Date;
 }
 
-export interface IRoleUsersResponseDTO extends IBaseUserDTO {
-	/** Expiration date of the role for that user */
-	role_expires: Date;
-
-	// Because Pick doesn't work with optional properties
-	nickname?: string;
+export interface InputUpdateRoleUsersDto {
+	/** User role edition */
+	users: InputUpdateRoleUserDto[];
 }
 
-export interface IRoleGetDTO {
+export interface InputDeleteRoleUsersDto {
+	/** Users ID's */
+	users: number[];
+}
+
+export interface OutputRoleUserDto extends OutputBaseUserDto {
+	/** Expiration date of the role for that user */
+	role_expires: Date;
+}
+
+export interface OutputRoleDto {
 	/** Role name */
 	name: Uppercase<string>;
 

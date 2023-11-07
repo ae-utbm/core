@@ -1,6 +1,6 @@
-import { IBaseResponseDTO, PERMISSION_NAMES } from '..';
+import { OutputBaseDto, PERMISSION_NAMES } from '..';
 
-export interface PermissionPostDto {
+export interface InputCreatePermissionDto {
 	/** The user OR role to add the permission to */
 	id: number;
 
@@ -11,7 +11,7 @@ export interface PermissionPostDto {
 	expires: Date;
 }
 
-export interface IPermissionPatchDTO {
+export interface InputUpdatePermissionDto {
 	/** The permission's id */
 	id: number;
 
@@ -25,7 +25,7 @@ export interface IPermissionPatchDTO {
 	revoked: boolean;
 }
 
-export interface IPermissionGetDTO extends IBaseResponseDTO {
+export interface OutputPermissionDto extends OutputBaseDto {
 	/** Permission name */
 	name: PERMISSION_NAMES;
 
@@ -39,7 +39,7 @@ export interface IPermissionGetDTO extends IBaseResponseDTO {
 	user_id: number;
 }
 
-export interface IPermissionsOfRoleDTO {
+export interface OutputPermissionsOfRoleDto {
 	/** The Role ID */
 	id: number;
 

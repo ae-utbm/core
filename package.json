@@ -4,6 +4,6 @@
   "private": true,
   "license": "GPL v3",
   "devDependencies": {
-    "type-fest": "^4.4.0"
+    "type-fest": "^4.6.0"
   }
 }

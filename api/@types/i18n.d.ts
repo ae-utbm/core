@@ -2,81 +2,6 @@
 
 import { Path } from "nestjs-i18n";
 export type I18nTranslations = {
-    "responses": {
-        "errors": {
-            "birth_date": {
-                "invalid": string;
-            };
-            "email": {
-                "already_verified": string;
-                "blacklisted": string;
-                "malformed": string;
-                "invalid": string;
-                "used": string;
-                "are_used": string;
-                "not_found": string;
-                "unverified": string;
-                "token": {
-                    "invalid": string;
-                };
-            };
-            "entity": {
-                "not_found": string;
-            };
-            "file": {
-                "infected": string;
-                "invalid_mime_type": string;
-                "no_file": string;
-                "not_found_on_disk": string;
-                "undefined_mime_type": string;
-                "unauthorized": string;
-            };
-            "id": {
-                "invalid": string;
-                "invalids": string;
-                "not_found": string;
-                "not_founds": string;
-            };
-            "image": {
-                "invalid_aspect_ratio": string;
-            };
-            "jwt": {
-                "invalid": string;
-                "expired": string;
-                "unknown": string;
-            };
-            "password": {
-                "mismatch": string;
-                "weak": string;
-            };
-            "permission": {
-                "invalid": string;
-                "not_found_on_user": string;
-                "already_on_user": string;
-            };
-            "promotion": {
-                "logo_not_found": string;
-            };
-            "role": {
-                "name_used": string;
-            };
-            "user": {
-                "cannot_update_birth_date_or_name": string;
-                "picture_cooldown": string;
-                "no_picture": string;
-                "no_banner": string;
-            };
-        };
-        "success": {
-            "deleted": string;
-            "email": {
-                "verified": string;
-            };
-            "user": {
-                "register": string;
-            };
-        };
-    };
     "templates": {
         "common": {
             "politeness": string;
@@ -116,6 +41,165 @@ export type I18nTranslations = {
             "body": {
                 "text": string;
                 "password": string;
+            };
+        };
+    };
+    "validations": {
+        "array": {
+            "invalid": {
+                "format": string;
+                "duplicate": string;
+                "not_empty": string;
+            };
+        };
+        "boolean": {
+            "invalid": {
+                "format": string;
+            };
+        };
+        "birth_date": {
+            "invalid": {
+                "outbound": string;
+            };
+        };
+        "date": {
+            "invalid": {
+                "format": string;
+            };
+        };
+        "email": {
+            "invalid": {
+                "format": string;
+                "blacklisted": string;
+                "size": string;
+                "used": string;
+                "are_used": string;
+                "already_verified": string;
+            };
+            "success": {
+                "verified": string;
+            };
+        };
+        "file": {
+            "invalid": {
+                "not_provided": string;
+                "not_found": string;
+                "no_mime_type": string;
+                "unauthorized_mime_type": string;
+                "infected": string;
+            };
+        };
+        "file_visibility_group": {
+            "invalid": {
+                "not_found": string;
+            };
+        };
+        "gender": {
+            "invalid": {
+                "format": string;
+            };
+        };
+        "id": {
+            "invalid": {
+                "format": string;
+                "min": string;
+            };
+        };
+        "ids": {
+            "invalid": {
+                "format": string;
+            };
+        };
+        "image": {
+            "invalid": {
+                "aspect_ratio": string;
+            };
+        };
+        "logs": {
+            "success": {
+                "deleted": string;
+            };
+        };
+        "number": {
+            "invalid": {
+                "format": string;
+                "min": string;
+            };
+        };
+        "password": {
+            "invalid": {
+                "mismatch": string;
+                "weak": string;
+            };
+        };
+        "permission": {
+            "invalid": {
+                "format": string;
+                "already_on": string;
+            };
+            "not_found": string;
+        };
+        "phone": {
+            "invalid": {
+                "format": string;
+            };
+        };
+        "promotion": {
+            "invalid": {
+                "not_found": string;
+                "no_logo": string;
+            };
+            "success": {
+                "deleted_logo": string;
+            };
+        };
+        "role": {
+            "invalid": {
+                "already_exist": string;
+                "already_on": string;
+            };
+            "not_found": string;
+        };
+        "string": {
+            "invalid": {
+                "format": string;
+                "uppercase": string;
+            };
+        };
+        "token": {
+            "invalid": {
+                "format": string;
+                "expired": string;
+                "unknown": string;
+            };
+        };
+        "user": {
+            "invalid": {
+                "not_in_file_visibility_group": string;
+            };
+            "success": {
+                "registered": string;
+                "deleted": string;
+                "deleted_picture": string;
+                "deleted_banner": string;
+            };
+            "cannot_update": string;
+            "not_found": {
+                "email": string;
+                "id": string;
+            };
+            "unverified": string;
+            "picture": {
+                "cooldown": string;
+                "not_found": string;
+            };
+            "banner": {
+                "not_found": string;
+            };
+        };
+        "users": {
+            "not_found": {
+                "ids": string;
             };
         };
     };

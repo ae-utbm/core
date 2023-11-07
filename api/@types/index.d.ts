@@ -7,6 +7,7 @@ import type { email } from '../../global/@types';
 import type { HttpStatus, RequestMethod } from '@nestjs/common';
 import type { Class, TitleCase } from 'type-fest';
 
+import { USER_GENDER } from '../constants/genders';
 import { PERMISSIONS } from '../constants/perms';
 import 'jest-extended';
 
@@ -15,6 +16,7 @@ export * from './dto';
 export * from './i18n';
 
 export type PERMISSION_NAMES = (typeof PERMISSIONS)[number]['name'];
+export type GENDERS = (typeof USER_GENDER)[number];
 
 export interface JWTPayload {
 	/** The user ID */
@@ -77,5 +79,4 @@ type StatusMessages_ = {
 	[Key in keyof typeof HttpStatus]: `${(typeof HttpStatus)[Key]} : ${TitleCase<Key>}`;
 };
 type StatusMessages = StatusMessages_[keyof StatusMessages_];
-
-export type PERMISSION_NAMES = (typeof PERMISSIONS)[number]['name'];
+export type HttpStatusNames = TitleCase<keyof typeof HttpStatus>;

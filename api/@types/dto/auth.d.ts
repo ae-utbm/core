@@ -1,6 +1,6 @@
 import type { email } from '../../../global/@types';
 
-export interface ISignInDTO {
+export interface InputSignInDto {
 	/** The user's email */
 	email: email;
 
@@ -8,7 +8,7 @@ export interface ISignInDTO {
 	password: string;
 }
 
-export interface ITokenDTO {
+export interface OutputTokenDto {
 	/** The JWT Token */
 	token: string;
 

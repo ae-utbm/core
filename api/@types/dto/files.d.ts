@@ -1,6 +1,6 @@
-import { IBaseResponseDTO } from '.';
+import { OutputBaseDto } from '.';
 
-export interface IFileGetDTO extends IBaseResponseDTO {
+export interface OutputFileDto extends OutputBaseDto {
 	filename: string;
 
 	mimetype: string;
@@ -14,7 +14,7 @@ export interface IFileGetDTO extends IBaseResponseDTO {
 	description?: string;
 }
 
-export class IFileVisibilityGroupGetDTO extends IBaseResponseDTO {
+export class OutputFileVisibilityGroupDto extends OutputBaseDto {
 	name: Uppercase<string>;
 
 	description: string;
