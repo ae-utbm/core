@@ -94,7 +94,7 @@ export interface OutputUserDto extends OutputBaseUserDto {
 	pronouns?: string;
 
 	/** User's promotion ID */
-	promotion_id?: number;
+	promotion?: number;
 
 	/** User's phone number */
 	last_seen?: Date;

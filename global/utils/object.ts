@@ -1,4 +1,4 @@
-import type { KeysRecursiveOf } from '#types';
+import type { Path } from '#types';
 import type { UnionToIntersection } from 'type-fest';
 
 export {};
@@ -48,7 +48,7 @@ declare global {
 		 *
 		 * @example Object.keysRecursive({ a: 1, b: { c: 2, d: 3 } }) // ['a', 'b.c', 'b.d']
 		 */
-		keysRecursive<T extends Record<string, unknown>>(target: T): KeysRecursiveOf<T>[];
+		keysRecursive<T extends Record<string, unknown>>(target: T): Path<T>[];
 	}
 }
 
@@ -91,7 +91,7 @@ if (!Object.prototype.merge) {
 
 if (!Object.prototype.keysRecursive) {
 	Object.defineProperty(Object.prototype, 'keysRecursive', {
-		value: <T extends Record<string, unknown>>(target: T): KeysRecursiveOf<T>[] => {
+		value: <T extends Record<string, unknown>>(target: T): Path<T>[] => {
 			const keys: string[] = [];
 
 			for (const key in target) {
@@ -101,7 +101,7 @@ if (!Object.prototype.keysRecursive) {
 				} else keys.push(key);
 			}
 
-			return keys as KeysRecursiveOf<T>[];
+			return keys as Path<T>[];
 		},
 		configurable: true,
 		writable: true,
