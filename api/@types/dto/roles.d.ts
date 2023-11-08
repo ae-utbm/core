@@ -8,7 +8,7 @@ export interface InputCreateRoleDto {
 	permissions: PERMISSION_NAMES[];
 }
 
-export interface InputUpdateRoleDto extends InputCreateRoleDTO {
+export interface InputUpdateRoleDto extends InputCreateRoleDto {
 	/** ID of the role */
 	id: number;
 }

@@ -75,7 +75,7 @@ if (!Array.prototype.shuffle) {
 }
 
 if (!Array.prototype.isUniform) {
-	Array.prototype.isUniform = function <T>(this: T[]): boolean {
+	Array.prototype.isUniform = function <T extends object>(this: T[]): boolean {
 		if (this.length === 0) return true;
 		const keysToHave = Object.keys(this[0]);
 

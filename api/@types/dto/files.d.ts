@@ -14,7 +14,7 @@ export interface OutputFileDto extends OutputBaseDto {
 	description?: string;
 }
 
-export class OutputFileVisibilityGroupDto extends OutputBaseDto {
+export interface OutputFileVisibilityGroupDto extends OutputBaseDto {
 	name: Uppercase<string>;
 
 	description: string;

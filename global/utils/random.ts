@@ -7,7 +7,7 @@ import * as crypto from 'crypto';
  * @param {number} min Minimum value **included** in the range @default 0
  * @returns {number} The generated integer
  */
-export function randomInt(max: number = 12, min: number = 0): number {
+export function randomInt(max = 12, min = 0): number {
 	if (max === min) return min;
 	if (max < min) [max, min] = [min, max];
 

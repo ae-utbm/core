@@ -1,3 +1,4 @@
+import type { email } from '#types';
 import type { OutputBaseDto, OutputFileDto } from '.';
 import type { GENDERS, PERMISSION_NAMES } from '..';
 
@@ -26,9 +27,25 @@ export interface InputRegisterUserDto extends InputRegisterUserAdminDto {
 
 // We extends InputRegisterUserAdminDto as the password is not included as it should be updated
 // with the password endpoint
-export interface InputUpdateUserDto
-	extends Partial<InputRegisterUserAdminDto>,
-		Partial<Pick<Required<OutputUserDto>, keyof OutputUserVisibilityDto>> {}
+export interface InputUpdateUserDto extends Partial<InputRegisterUserAdminDto> {
+	/** User gender */
+	gender?: GENDERS;
+
+	/** User's pronouns */
+	pronouns?: string;
+
+	/** User's promotion ID */
+	promotion?: number;
+
+	/** User's secondary email */
+	secondary_email?: email;
+
+	/** User's phone number */
+	phone?: string;
+
+	/** User's parent contact */
+	parents_phone?: string;
+}
 
 export interface InputUpdateUsersDto {
 	users: InputUpdateUserDto[];
@@ -141,7 +158,7 @@ export interface OutputUserVisibilityDto {
 	parents_phone: boolean;
 }
 
-export interface InputUpdateUserVisibilityDto extends Omit<OutputUserVisibilityDto, 'user_id'> {}
+export type InputUpdateUserVisibilityDto = Omit<OutputUserVisibilityDto, 'user_id'>;
 
 export interface OutputUserPictureDto extends OutputFileDto {
 	/** User owner ID */

@@ -1,3 +1,6 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable @typescript-eslint/ban-types */
+
 // API types
 export * from './i18n';
 export * from './response';
@@ -9,6 +12,7 @@ import type { Class, TitleCase } from 'type-fest';
 
 import { USER_GENDER } from '../constants/genders';
 import { PERMISSIONS } from '../constants/perms';
+
 import 'jest-extended';
 
 // API types
@@ -33,6 +37,7 @@ export interface JWTPayload {
 
 //--- Global types override for the API only ---//
 declare global {
+	// @ts-ignore
 	declare namespace jest {
 		interface Expect {
 			/**
@@ -62,7 +67,6 @@ declare global {
 			): void;
 
 			/** @deprecated */
-			// eslint-disable-next-line @typescript-eslint/ban-types
 			(name: number | string | Function | FunctionLike, fn: EmptyFunction): void;
 		}
 
@@ -74,6 +78,10 @@ declare global {
 		}
 	}
 }
+
+type ProvidesCallback = (done: unknown) => Promise<unknown> | void;
+type FunctionLike = (...args: unknown[]) => unknown;
+type EmptyFunction = () => unknown;
 
 type StatusMessages_ = {
 	[Key in keyof typeof HttpStatus]: `${(typeof HttpStatus)[Key]} : ${TitleCase<Key>}`;

@@ -3,7 +3,7 @@ import type { SplitIncludingDelimiters } from 'type-fest/source/delimiter-case';
 import type { StringDigit, UpperCaseCharacters } from 'type-fest/source/internal';
 
 declare module 'type-fest' {
-	type TitleCaseJoin<Parts extends readonly string[]> = Parts extends [
+	type TitleCaseJoin<Parts extends readonly string[] | unknown> = Parts extends [
 		`${infer FirstPart}`,
 		`${infer SecondPart}`,
 		...infer Rest,
