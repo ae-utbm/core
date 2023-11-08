@@ -1,4 +1,4 @@
-import { base64, imageURL } from '../@types';
+import type { base64, imageURL } from '../@types';
 
 export {};
 
@@ -43,6 +43,8 @@ if (!ArrayBuffer.prototype.toBase64) {
 	};
 }
 
+// Not testable on NodeJS
+/* istanbul ignore next */
 if (!ArrayBuffer.prototype.toImageURL) {
 	ArrayBuffer.prototype.toImageURL = function toImageURL(type = 'image', extension = 'webp'): imageURL {
 		const bytes = new Uint8Array(this);
@@ -53,10 +55,13 @@ if (!ArrayBuffer.prototype.toImageURL) {
 	};
 }
 
+// Not easily testable on NodeJS
+/* istanbul ignore next */
 if (!ArrayBuffer.prototype.toJSON) {
 	ArrayBuffer.prototype.toJSON = function toJSON<T>(): T {
 		try {
-			return JSON.parse(String.fromCharCode.apply(null, new Uint8Array(this) as unknown as number[])) as T;
+			// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+			return JSON.parse(String.fromCharCode.apply(null, new Uint8Array(this)));
 		} catch (error) {
 			if (error instanceof SyntaxError) throw new SyntaxError('The ArrayBuffer cannot be converted to JSON');
 			throw error;
