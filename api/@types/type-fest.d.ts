@@ -15,7 +15,7 @@ declare module 'type-fest' {
 			: `${Capitalize<FirstPart>} ${TitleCase<
 					Join<[SecondPart, Rest extends string[] | number[] ? Join<Rest, ''> : ''], ''>
 			  >}`
-		: Parts extends [`${infer FirstPart}`, ...infer Rest]
+		: Parts extends [`${infer FirstPart}`, ...infer Rest] // @ts-expect-error (unknown is not assignable to string)
 		? `${Capitalize<FirstPart>}${Rest extends string ? Rest : TitleCaseJoin<Rest>}`
 		: Parts extends [string | number]
 		? Parts extends [string]

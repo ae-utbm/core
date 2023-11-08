@@ -61,7 +61,7 @@ if (!ArrayBuffer.prototype.toJSON) {
 	ArrayBuffer.prototype.toJSON = function toJSON<T>(): T {
 		try {
 			// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-			return JSON.parse(String.fromCharCode.apply(null, new Uint8Array(this)));
+			return JSON.parse(String.fromCharCode.apply(null, new Uint8Array(this) as unknown as number[]));
 		} catch (error) {
 			if (error instanceof SyntaxError) throw new SyntaxError('The ArrayBuffer cannot be converted to JSON');
 			throw error;
