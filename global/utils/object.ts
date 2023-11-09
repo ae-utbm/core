@@ -1,4 +1,5 @@
-import { UnionToIntersection } from 'type-fest';
+import type { Path } from '#types';
+import type { UnionToIntersection } from 'type-fest';
 
 export {};
 
@@ -22,7 +23,7 @@ declare global {
 		merge<T extends Record<string, unknown>>(target: T): T;
 		merge<T extends Record<string, unknown>, U extends Record<string, unknown>[]>(
 			target: T,
-			...sources: U | undefined
+			...sources: U
 		): (T & UnionToIntersection<U[number]>) | T;
 
 		/**
@@ -40,6 +41,14 @@ declare global {
 		 * Object.isObject([]) // false
 		 */
 		isObject(item: unknown): boolean;
+
+		/**
+		 * Get keys of an object recursively
+		 * @returns {Array<string>} Recursive keys of the object
+		 *
+		 * @example Object.keysRecursive({ a: 1, b: { c: 2, d: 3 } }) // ['a', 'b.c', 'b.d']
+		 */
+		keysRecursive<T extends Record<string, unknown>>(target: T): Path<T>[];
 	}
 }
 
@@ -57,10 +66,11 @@ if (!Object.prototype.merge) {
 	Object.defineProperty(Object.prototype, 'merge', {
 		value: <T extends Record<string, unknown>, U extends Record<string, unknown>[]>(
 			target: T,
-			...sources: U | undefined
+			...sources: U
 		): (T & UnionToIntersection<U[number]>) | T => {
 			if (!sources.length) return target;
-			const source: Record<string, unknown> = sources.shift();
+			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+			const source: Record<string, unknown> = sources.shift()!;
 
 			if (Object.isObject(target) && Object.isObject(source)) {
 				for (const key in source) {
@@ -73,6 +83,25 @@ if (!Object.prototype.merge) {
 			}
 
 			return Object.merge(target, ...sources);
+		},
+		configurable: true,
+		writable: true,
+	});
+}
+
+if (!Object.prototype.keysRecursive) {
+	Object.defineProperty(Object.prototype, 'keysRecursive', {
+		value: <T extends Record<string, unknown>>(target: T): Path<T>[] => {
+			const keys: string[] = [];
+
+			for (const key in target) {
+				if (Object.isObject(target[key])) {
+					const nestedKeys = Object.keysRecursive(target[key] as Record<string, unknown>);
+					keys.push(...nestedKeys.map((nestedKey) => `${key}.${nestedKey}`));
+				} else keys.push(key);
+			}
+
+			return keys as Path<T>[];
 		},
 		configurable: true,
 		writable: true,

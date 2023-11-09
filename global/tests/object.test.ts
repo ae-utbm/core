@@ -26,4 +26,11 @@ describe('Object (unit)', () => {
 			expect(Object.merge({ a: true }, { b: '2' }, { c: 3 })).toEqual({ a: true, b: '2', c: 3 });
 		});
 	});
+
+	describe('.keysRecursive()', () => {
+		it('should return all the keys of an object and its nested objects', () => {
+			const obj = { a: 1, b: { c: 2, d: { e: 3 } } };
+			expect(Object.keysRecursive(obj)).toEqual(['a', 'b.c', 'b.d.e']);
+		});
+	});
 });

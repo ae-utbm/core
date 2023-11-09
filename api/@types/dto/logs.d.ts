@@ -1,8 +1,6 @@
-import { BaseEntity } from '../base-entity';
-
-export interface LogEntity<TUser> extends Omit<BaseEntity, 'updated_at'> {
-	/** The user who made the action */
-	user: TUser;
+export interface OutputLogDto {
+	/** The user ID who made the action */
+	user_id: number;
 
 	/** The action made by the user */
 	action: string;

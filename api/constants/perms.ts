@@ -1,6 +1,5 @@
 /* istanbul ignore file */
-
-import type { PERMISSION_NAMES } from '../@types/permissions';
+import type { PERMISSION_NAMES } from '../@types';
 
 /**
  * This file contains all the permissions available in the API.

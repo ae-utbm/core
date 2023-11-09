@@ -15,3 +15,7 @@ interface String {
 	/** Returns a string where all alphabetic characters have been converted to uppercase, taking into account the host environment's current locale. */
 	toLocaleUpperCase(locales?: string | string[]): Uppercase<string>;
 }
+
+interface JSON {
+	parse<T>(text: string, reviver?: <K, L>(this: K, key: string, value: L) => unknown): T;
+}

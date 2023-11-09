@@ -1,4 +1,5 @@
-import * as crypto from 'node:crypto';
+// Crypto is a node native module, use webpack's node polyfill to use it in the browser
+import * as crypto from 'crypto';
 
 /**
  * Safely generates a random integer between the given range.
@@ -6,7 +7,7 @@ import * as crypto from 'node:crypto';
  * @param {number} min Minimum value **included** in the range @default 0
  * @returns {number} The generated integer
  */
-export function randomInt(max: number = 12, min: number = 0): number {
+export function randomInt(max = 12, min = 0): number {
 	if (max === min) return min;
 	if (max < min) [max, min] = [min, max];
 
