@@ -1,5 +1,5 @@
 import type { email } from '#types';
-import type { OutputBaseDto, OutputFileDto } from '.';
+import type { OutputBaseDto } from '.';
 import type { GENDERS, PERMISSION_NAMES } from '..';
 
 export interface InputRegisterUserAdminDto {
@@ -159,13 +159,3 @@ export interface OutputUserVisibilityDto {
 }
 
 export type InputUpdateUserVisibilityDto = Omit<OutputUserVisibilityDto, 'user_id'>;
-
-export interface OutputUserPictureDto extends OutputFileDto {
-	/** User owner ID */
-	picture_user_id: number;
-}
-
-export interface OutputUserBannerDto extends OutputFileDto {
-	/** User owner ID */
-	banner_user_id: number;
-}

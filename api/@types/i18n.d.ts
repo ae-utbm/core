@@ -83,7 +83,10 @@ export type I18nTranslations = {
         "file": {
             "invalid": {
                 "not_provided": string;
-                "not_found": string;
+                "not_found": {
+                    "on_disk": string;
+                    "by_id": string;
+                };
                 "no_mime_type": string;
                 "unauthorized_mime_type": string;
                 "infected": string;

@@ -1,4 +1,4 @@
-import type { OutputBaseDto, OutputFileDto } from '.';
+import type { OutputBaseDto } from '.';
 
 export interface OutputPromotionDto extends OutputBaseDto {
 	/** Promotion number */
@@ -9,8 +9,4 @@ export interface OutputPromotionDto extends OutputBaseDto {
 
 	/** Promotion picture id */
 	picture_id?: number;
-}
-
-export interface OutputPromotionPictureDto extends OutputFileDto {
-	picture_promotion_id: number;
 }
