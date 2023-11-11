@@ -28,6 +28,9 @@ export interface InputRegisterUserDto extends InputRegisterUserAdminDto {
 // We extends InputRegisterUserAdminDto as the password is not included as it should be updated
 // with the password endpoint
 export interface InputUpdateUserDto extends Partial<InputRegisterUserAdminDto> {
+	/** User nickname */
+	nickname?: string;
+
 	/** User gender */
 	gender?: GENDERS;
 
@@ -129,7 +132,7 @@ export interface OutputUserRoleDto extends OutputBaseDto {
 	permissions: Array<PERMISSION_NAMES>;
 }
 
-export interface OutputUserVisibilityDto {
+export interface OutputUserVisibilityDto extends OutputBaseDto {
 	/** The User ID */
 	user_id: number;
 
@@ -158,4 +161,4 @@ export interface OutputUserVisibilityDto {
 	parents_phone: boolean;
 }
 
-export type InputUpdateUserVisibilityDto = Omit<OutputUserVisibilityDto, 'user_id'>;
+export type InputUpdateUserVisibilityDto = Omit<OutputUserVisibilityDto, 'user_id' | keyof OutputBaseDto>;
