@@ -2,7 +2,6 @@
 /* eslint-disable @typescript-eslint/ban-types */
 
 // API types
-export * from './i18n';
 export * from './response';
 
 //--- Global types override for the API only ---//
