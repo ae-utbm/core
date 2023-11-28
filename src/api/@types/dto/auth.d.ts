@@ -1,4 +1,4 @@
-import type { email } from '../../../global/@types';
+import type { email } from '../../../global/@types/index';
 
 export interface InputSignInDto {
 	/** The user's email */

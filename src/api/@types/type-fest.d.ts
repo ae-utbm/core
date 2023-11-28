@@ -29,7 +29,7 @@ declare module 'type-fest' {
 	 *
 	 * @example
 	 * ```ts
-	 * import type { TitleCase } from '#types/api';
+	 * import type { TitleCase } from '@ae_utbm/core';
 	 * // Simple
 	 * const someVariable: TitleCase<'thisIsASpecialProperty'> = 'This is a Special Property';
 	 * ```

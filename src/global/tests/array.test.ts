@@ -10,12 +10,19 @@ describe('Array (unit)', () => {
 		it('should not remove anything if the specified items are not in the array', () => {
 			const array = [1, 2, 3, 4, 5];
 			expect(array.remove(6, 7, 8)).toEqual([1, 2, 3, 4, 5]);
-			expect([].remove(1, 2, 3)).toEqual([]);
+			expect([].remove()).toEqual([]);
 		});
 
 		it('should remove any duplicates', () => {
 			const array = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5];
 			expect(array.remove(1, 2, 3)).toEqual([4, 5, 4, 5]);
+		});
+	});
+
+	describe('.shuffle()', () => {
+		it('should shuffle the array', () => {
+			const array = [1, 2, 3, 4, 5];
+			expect(array.shuffle()).not.toEqual([1, 2, 3, 4, 5]);
 		});
 	});
 

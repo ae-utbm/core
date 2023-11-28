@@ -1,4 +1,4 @@
-import type { email } from '#types';
+import type { email } from '../../../global/@types/index';
 import type { OutputBaseDto, OutputFileDto } from '.';
 import type { GENDERS, PERMISSION_NAMES } from '..';
 

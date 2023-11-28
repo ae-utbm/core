@@ -1,4 +1,4 @@
-import { email } from '../../global/@types';
+import { email } from '../../global/@types/index';
 
 export interface JWTPayload {
 	/** The user id */

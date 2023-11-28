@@ -6,7 +6,7 @@ export * from './i18n';
 export * from './response';
 
 //--- Global types override for the API only ---//
-import type { email } from '../../global/@types';
+import type { email } from '../../global/@types/index';
 import type { HttpStatus, RequestMethod } from '@nestjs/common';
 import type { Class, TitleCase } from 'type-fest';
 

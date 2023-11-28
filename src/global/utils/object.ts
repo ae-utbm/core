@@ -1,4 +1,4 @@
-import type { Path } from '#types';
+import type { Path } from '../@types/index';
 import type { UnionToIntersection } from 'type-fest';
 
 export {};
