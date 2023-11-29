@@ -1,5 +1,5 @@
 /** @jest-environment jsdom */
-import '../utils';
+import '../src/core/utils/index';
 
 describe('ArrayBuffer (unit)', () => {
 	describe('.toBase64()', () => {

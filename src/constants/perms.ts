@@ -1,5 +1,5 @@
 /* istanbul ignore file */
-import type { PERMISSION_NAMES } from '../@types/index';
+import type { Permissions } from '../../types/@ae_utbm/core';
 
 /**
  * This file contains all the permissions available in the API.
@@ -84,4 +84,4 @@ export const PERMISSIONS = [
 	},
 ] as const;
 
-export const PERMISSIONS_NAMES: PERMISSION_NAMES[] = PERMISSIONS.map((p) => p.name);
+export const PERMISSIONS_NAMES: Permissions[] = PERMISSIONS.map((p) => p.name);

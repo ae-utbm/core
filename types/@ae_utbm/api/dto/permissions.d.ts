@@ -1,11 +1,11 @@
-import { OutputBaseDto, PERMISSION_NAMES } from '..';
+import { OutputBaseDto, Permissions } from '..';
 
 export interface InputCreatePermissionDto {
 	/** The user OR role to add the permission to */
 	id: number;
 
 	/** The permission's name */
-	permission: PERMISSION_NAMES;
+	permission: Permissions;
 
 	/** The expiration date */
 	expires: Date;
@@ -16,7 +16,7 @@ export interface InputUpdatePermissionDto {
 	id: number;
 
 	/** The permission's name */
-	name: PERMISSION_NAMES;
+	name: Permissions;
 
 	/** The permission's expiration date */
 	expires: Date;
@@ -27,7 +27,7 @@ export interface InputUpdatePermissionDto {
 
 export interface OutputPermissionDto extends OutputBaseDto {
 	/** Permission name */
-	name: PERMISSION_NAMES;
+	name: Permissions;
 
 	/** Whether the permission is revoked or not */
 	revoked: boolean;
@@ -44,5 +44,5 @@ export interface OutputPermissionsOfRoleDto {
 	id: number;
 
 	/** Permissions within the role */
-	permissions: PERMISSION_NAMES[];
+	permissions: Permissions[];
 }

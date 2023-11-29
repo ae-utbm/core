@@ -1,6 +1,6 @@
 import type { email } from '../../../global/@types/index';
 import type { OutputBaseDto, OutputFileDto } from '.';
-import type { GENDERS, PERMISSION_NAMES } from '..';
+import type { Genders, Permissions } from '..';
 
 export interface InputRegisterUserAdminDto {
 	/** The user's email */
@@ -29,7 +29,7 @@ export interface InputRegisterUserDto extends InputRegisterUserAdminDto {
 // with the password endpoint
 export interface InputUpdateUserDto extends Partial<InputRegisterUserAdminDto> {
 	/** User gender */
-	gender?: GENDERS;
+	gender?: Genders;
 
 	/** User's pronouns */
 	pronouns?: string;
@@ -88,7 +88,7 @@ export interface OutputUserDto extends OutputBaseUserDto {
 	age: number;
 
 	/** User gender */
-	gender?: GENDERS;
+	gender?: Genders;
 
 	/** User's pronouns */
 	pronouns?: string;
@@ -126,7 +126,7 @@ export interface OutputUserRoleDto extends OutputBaseDto {
 	revoked: boolean;
 
 	/** List of permissions in that role */
-	permissions: Array<PERMISSION_NAMES>;
+	permissions: Array<Permissions>;
 }
 
 export interface OutputUserVisibilityDto {

@@ -1,11 +1,11 @@
-import type { OutputBaseUserDto, PERMISSION_NAMES } from '..';
+import type { OutputBaseUserDto, Permissions } from '..';
 
 export interface InputCreateRoleDto {
 	/** Name of the role, capitalized */
 	name: Uppercase<string>;
 
 	/** Permissions of the role */
-	permissions: PERMISSION_NAMES[];
+	permissions: Permissions[];
 }
 
 export interface InputUpdateRoleDto extends InputCreateRoleDto {
@@ -44,7 +44,7 @@ export interface OutputRoleDto {
 	revoked: boolean;
 
 	/** Specify what permissions the role has */
-	permissions: PERMISSION_NAMES[];
+	permissions: Permissions[];
 
 	/** Specify to which user the role is attached */
 	users_count: number;

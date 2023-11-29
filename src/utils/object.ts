@@ -1,4 +1,4 @@
-import type { Path } from '../@types/index';
+import type { Path } from '../../types/@ae_utbm/core';
 import type { UnionToIntersection } from 'type-fest';
 
 export {};

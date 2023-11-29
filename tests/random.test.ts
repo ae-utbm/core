@@ -1,4 +1,4 @@
-import { randomInt } from '../utils';
+import { randomInt } from '../src/core/utils';
 
 describe('.randomInt()', () => {
 	it('should generate a random integer between the given range', () => {

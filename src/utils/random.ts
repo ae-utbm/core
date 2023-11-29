@@ -1,4 +1,6 @@
-// Crypto is a node native module, use webpack's node polyfill to use it in the browser
+/**
+ *! Crypto is a node native module, use webpack's node polyfill to use it in the browser
+ */
 import * as crypto from 'crypto';
 
 /**
