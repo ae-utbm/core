@@ -1,7 +1,6 @@
 {
   "name": "@ae_utbm/core",
-  "version": "1.0.0",
-  "private": true,
+  "version": "1.0.1",
   "description": "Typings & utilities for the AE UTBM API & sub-projects",
   "license": "GPL v3",
   "main": "src/index.ts",
