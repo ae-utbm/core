@@ -1,0 +1,11 @@
+
+CORE
+	-> API DTOs
+	-> API Constants (perms, genders, etc)
+	-> Extensions (Array, Object, etc)
+
+API
+	-> CORE
+
+SITH 4
+	-> CORE
