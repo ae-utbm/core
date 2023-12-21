@@ -1,3 +1,5 @@
+/// <reference lib="es2015.core" />
+
 /**
  * Improve type definitions for Object.keys
  */
